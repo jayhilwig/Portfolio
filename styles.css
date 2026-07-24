@@ -704,6 +704,19 @@ h2 {
   overflow: visible;
   display: block;
 }
+.case-study-media-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.case-study-media-link:hover .case-study-placeholder-mark,
+.case-study-media-link:focus-visible .case-study-placeholder-mark {
+  border-color: var(--link);
+}
+.case-study-media-link:focus-visible {
+  outline: 2px solid var(--link);
+  outline-offset: 4px;
+}
 .case-study-placeholder {
   width: 100%;
   max-width: none;
