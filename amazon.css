@@ -486,6 +486,14 @@
   border: 1px solid var(--amazon-border);
   background: #f7fafa;
 }
+.case-amazon .artifact-card .lightbox-image-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
 .case-amazon .lightbox-image-button, .case-amazon .lightbox-image-button:focus, .case-amazon .lightbox-image-button:focus-visible, .case-amazon .lightbox-image-button:active {
   outline: 0;
   box-shadow: none;
