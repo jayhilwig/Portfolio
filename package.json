@@ -4,6 +4,6 @@
   },
   "dependencies": {
     "serve": "^14.2.4",
-    "tw-fade": "^0.6.0",
+    "tw-fade": "^0.6.0"
   }
 }
