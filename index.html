@@ -83,16 +83,47 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <meta name="format-detection" content="telephone=no" />
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Jay Hilwig",
-        "url": "https://jhilwig.com/",
-        "jobTitle": "Product Designer",
-        "sameAs": ["https://www.linkedin.com/in/jayhilwig/"]
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://jhilwig.com/#person",
+      "name": "Jay Hilwig",
+      "url": "https://jhilwig.com/",
+      "image": "https://jhilwig.com/JayLWV2.jpg",
+      "jobTitle": "Senior Product Designer",
+      "description": "Senior Product Designer specializing in enterprise UX, AI-assisted products, and complex workflows.",
+      "sameAs": [
+        "https://www.linkedin.com/in/jayhilwig/",
+        "https://github.com/jayhilwig"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://jhilwig.com/#website",
+      "url": "https://jhilwig.com/",
+      "name": "Jay Hilwig Portfolio",
+      "publisher": {
+        "@id": "https://jhilwig.com/#person"
       }
-    </script>
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://jhilwig.com/#webpage",
+      "url": "https://jhilwig.com/",
+      "name": "Jay Hilwig — Product Designer",
+      "isPartOf": {
+        "@id": "https://jhilwig.com/#website"
+      },
+      "about": {
+        "@id": "https://jhilwig.com/#person"
+      }
+    }
+  ]
+}
+</script>
     <link rel="stylesheet" href="lite-light.css" />
 
     <!-- Umami metrics -->
