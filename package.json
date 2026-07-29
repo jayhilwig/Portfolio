@@ -1,5 +1,9 @@
 {
+  "scripts": {
+    "start": "serve . -l $PORT"
+  },
   "dependencies": {
-    "tw-fade": "^0.6.0"
+    "serve": "^14.2.4",
+    "tw-fade": "^0.6.0",
   }
 }
