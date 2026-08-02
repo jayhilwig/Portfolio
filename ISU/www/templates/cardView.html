@@ -1,0 +1,54 @@
+<ion-nav-view name="cardView">
+<body ng-controller="cardCtrl"  >
+<!-- <audio autoplay="true">
+  <source src="snd/flip3.mp3" type="audio/mpeg">
+</audio> -->
+	<link href="css/cardView.css" rel="stylesheet">
+
+	<ion-view title="IDEO" align-title="center"  >
+	<ion-content has-header="true" has-subheader="false" has-tabs="true" scroll="false" >
+
+    <div id="box" class="box">
+      <span id="output"></span>
+    
+	<div class="row" ng-controller="cardView">
+
+		<div class="col cardsymbol large {{colorCard}} {{fabricCard}}"  >
+
+			<div class="row "> 
+				<div class="col-90 cardHead">
+					{{headCard}}
+				</div>
+				<div class="col-10">
+					<i class="{{cardsymbolCard}} lgSymbol"></i> 
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<div class="cardContent" >
+						{{contentCard}}
+					</div>
+					<div class="cardContent" >
+						{{contentCardB}}
+					</div>
+					<div class="cardFoot" >
+						{{footCard}}
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<i class="cornerSymbol" ><img src="img/corner_logo.svg" width="20vw" ></i>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	</div>
+
+</ion-content>
+</ion-view>
+
+</body>
+</ion-nav-view>

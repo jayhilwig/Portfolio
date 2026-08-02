@@ -1,0 +1,88 @@
+<ion-nav-view name="card2">
+
+<style>
+ul li {
+  color:white !important;height:2vh;
+  line-height: .5vh;
+}
+.item-complex .item-content {
+  padding:0px 5px;
+}
+
+.item.active:not(.item-divider):not(.item-input):not(.item-input-inset) {
+  background-color:#000;
+  border-color:white;
+}
+</style>
+
+<body ng-controller="cardCtrl">
+
+<ion-view title="Cards" right-buttons="rightButtons">
+
+  <div class="bar bar-subheader" ng-show="showSubheader" >
+    <div class="button-bar">
+      <a ng-href="#/tab/card0" class="button button-outline button-light"><i class="icon"><img src="img/slider_icons1.svg" width="25vw"></i></a>
+      <a ng-href="#/tab/card1" class="button button-outline button-light"><i class="icon"><img src="img/slider_icons2.svg" width="32vw"></i></a>
+      <a ng-href="#/tab/card2" class="button button-outline button-light insetBtn"><i class="icon"><img src="img/slider_icons3.svg" width="32vw"></i></a>
+    </div>
+  </div>
+
+
+  <ion-content has-header="true" has-subheader="true" has-tabs="true" scroll="true" >
+
+
+<ion-item ng-repeat="allCards in allCards" >
+
+<ul class="list" >
+  <li class="{{allCards.colorDef}} item item-icon-right" ng-click="cardClick({{allCards}}, '0')" >
+    {{allCards.head0}}<i class="icon {{allCards.cardsymbol0}} whiteIcon"></i>
+  </li>
+    <li class="{{allCards.colorDef}} item item-icon-right" ng-click="cardClick({{allCards}}, '1')" >
+    {{allCards.head1}}<i class="icon {{allCards.cardsymbol1}} whiteIcon"></i>
+  </li>
+    <li class="{{allCards.colorDef}} item item-icon-right" ng-click="cardClick({{allCards}}, '2')">
+    {{allCards.head2}}<i class="icon {{allCards.cardsymbol2}} whiteIcon"></i>
+  </li>
+    <li class="{{allCards.colorDef}} item item-icon-right" ng-click="cardClick({{allCards}}, '3')">
+    {{allCards.head3}}<i class="icon {{allCards.cardsymbol3}} whiteIcon"></i>
+  </li>
+    <li class="{{allCards.colorDef}} item item-icon-right" ng-click="cardClick({{allCards}}, '4')">
+    {{allCards.head4}}<i class="icon {{allCards.cardsymbol4}} whiteIcon"></i>
+  </li>
+    <li class="{{allCards.colorDef}} item item-icon-right" ng-click="cardClick({{allCards}}, '5')">
+    {{allCards.head5}}<i class="icon {{allCards.cardsymbol5}} whiteIcon"></i>
+  </li>
+    <li class="{{allCards.colorDef}} item item-icon-right" ng-click="cardClick({{allCards}}, '6')">
+    {{allCards.head6}}<i class="icon {{allCards.cardsymbol6}} whiteIcon"></i>
+  </li>
+    <li class="{{allCards.colorDef}} item item-icon-right" ng-click="cardClick({{allCards}}, '7')">
+    {{allCards.head7}}<i class="icon {{allCards.cardsymbol7}} whiteIcon"></i>
+  </li>
+    <li class="{{allCards.colorDef}} item item-icon-right" ng-click="cardClick({{allCards}}, '8')">
+    {{allCards.head8}}<i class="icon {{allCards.cardsymbol8}} whiteIcon"></i>
+  </li>
+    <li class="{{allCards.colorDef}} item item-icon-right" ng-click="cardClick({{allCards}}, '9')">
+    {{allCards.head9}}<i class="icon {{allCards.cardsymbol9}} whiteIcon"></i>
+  </li>
+    <li class="{{allCards.colorDef}} item item-icon-right" ng-click="cardClick({{allCards}}, '10')">
+    {{allCards.head10}}<i class="icon {{allCards.cardsymbol10}} whiteIcon"></i>
+  </li>
+    <li class="{{allCards.colorDef}} item item-icon-right {{allCards.hideSome11}}" ng-click="cardClick({{allCards}}, '11')">
+    {{allCards.head11}}<i class="icon {{allCards.cardsymbol11}} whiteIcon"></i>
+  </li>
+    <li class="{{allCards.colorDef}} item item-icon-right {{allCards.hideSome12}}" ng-click="cardClick({{allCards}}, '12')">
+    {{allCards.head12}}<i class="icon {{allCards.cardsymbol12}} whiteIcon"></i>
+  </li>
+    <li class="{{allCards.colorDef}} item item-icon-right {{allCards.hideSome13}}" ng-click="cardClick({{allCards}}, '13')">
+    {{allCards.head13}}<i class="icon {{allCards.cardsymbol13}} whiteIcon"></i>
+  </li>
+</ul>
+
+</ion-item>
+
+</ion-content>
+
+</ion-view>
+</body>
+
+</ion-nav-view>

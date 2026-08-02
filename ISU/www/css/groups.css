@@ -1,0 +1,23 @@
+.card {
+	color:black;
+}
+ul li {
+	color: white !important;
+}
+.groupHead {
+	font-size:2rem  ;
+	height:6vh ;
+	background: #fff;
+	color:#333;
+	border: 1px solid #aaa;
+
+}
+.item.active:not(.item-divider):not(.item-input):not(.item-input-inset) {
+  background-color:#000;
+  border-color:white;
+}
+.trashBtn {
+font-size:1.3rem !important; 
+-webkit-box-shadow: -3px 0 3px#ccc; 
+opacity: 0.6;
+}

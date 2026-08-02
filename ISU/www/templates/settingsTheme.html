@@ -1,0 +1,88 @@
+<ion-nav-view class="slide-left-right-ios7" name="settingsTheme">
+
+<body ng-controller="AppCtrl" ng-app="">
+	<link ng-repeat="stylesheet in stylesheets" ng-href="css/{{stylesheet.href}}.css"  rel="stylesheet" />
+	<ion-view title="Theme" align-title="center" left-buttons="leftButtons" >
+	<ion-content has-header="true" has-subheader="false" has-tabs="false" scroll="true" >
+	
+
+	<div class="row" style="height:12vh">
+		<div class="col-10"></div>
+		<div class="col-20 learnColor">&nbsp;</div>
+		<div class="col-20 lookColor">&nbsp;</div>
+		<div class="col-20 askColor">&nbsp;</div>
+		<div class="col-20 tryColor">&nbsp;</div>
+		<div class="col-10"></div>
+	</div>
+
+	<div class="row">&nbsp;</div>
+
+	<div class="row">
+		<div class="col">
+
+			<h4>
+				<IMG SRC="img/ideo.svg" WIDTH="20%"></IMG>&nbsp;Method Card Theme
+			</h4>
+		</div>
+	</div>
+
+		<div class="list">
+
+			<label class="item item-radio">
+				<input type="radio" name="group" value="Default" checked="checked" ng-click='theme0()' >
+				<div class="item-content positive">
+					Default
+				</div>
+				<i class="radio-icon ion-checkmark"></i>
+			</label>
+
+			<label class="item item-radio">
+				<input type="radio" name="group" value="Natural" ng-click='theme1()'>
+				<div class="item-content balanced" >
+					Natural
+				</div>
+				<i class="radio-icon ion-checkmark"></i>
+			</label>
+
+			<label class="item item-radio">
+				<input type="radio" name="group" value="Alert" ng-click='theme2()'>
+				<div class="item-content energized">
+					Alert
+				</div>
+				<i class="radio-icon ion-checkmark"></i>
+			</label>
+
+			<label class="item item-radio">
+				<input type="radio" name="group" value="Fast" ng-click='theme3()'>
+				<div class="item-content assertive">
+					Neon
+				</div>
+				<i class="radio-icon ion-checkmark"></i>
+			</label>
+
+			<label class="item item-radio">
+				<input type="radio" name="group" value="Subdued" ng-click='theme4()'>
+				<div class="item-content royal">
+					Subdued
+				</div>
+				<i class="radio-icon ion-checkmark"></i>
+			</label>
+
+			<label class="item item-radio">
+				<input type="radio" name="group" value="Minimal" ng-click='theme5()'>
+				<div class="item-content dark">
+					Minimal
+				</div>
+				<i class="radio-icon ion-checkmark"></i>
+			</label>
+
+		</div>
+
+
+
+	</ion-content>
+
+</ion-view>
+
+</body>
+</ion-nav-view>

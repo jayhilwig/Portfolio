@@ -1,0 +1,98 @@
+/* Your app's CSS, go crazy, make it your own */
+
+.ionic-logo {
+  display: block;
+  margin: 15px auto;
+  width: 96px;
+  height: 96px;
+}
+.card{
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0);
+}
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+/* Jay */
+.item-icon-left {
+  padding-left:18px;
+}
+.insetBtn {
+  -moz-box-shadow: inset 0 0 10px#ddd;
+  box-shadow: inset 0 0 10px#ddd;
+  -webkit-box-shadow: inset 0 0 10px#ddd;
+}
+.insetBtnBlk {
+  -moz-box-shadow: inset 0 0 10px#555;
+  box-shadow: inset 0 0 10px#555;
+  -webkit-box-shadow: inset 0 0 10px#555;
+}
+.whiteIcon{
+  color:white !important;
+  width:10vw; 
+  padding-left:1vw;
+  font-size: 2.2rem !important;
+}
+.ion-more {
+  opacity: 0.2;
+}
+
+.bar .button.button-clear .icon:before   {
+  font-size: 2.5rem;
+}
+
+
+
+.tab-title {
+  margin-left:4px;
+}
+
+a:link,a:visited,a:hover,a:active {
+  text-decoration:none;
+}
+
+
+
+.learnFabric, .lookFabric, .askFabric, .tryFabric {
+  background-position: right;
+  background-repeat: repeat;
+}
+
+
+.action-sheet-group .action-sheet-title {
+  padding:1px;
+}
+.bold {font-weight: bold}
+
+html, body {
+  margin: 0;
+  padding: 0; 
+  border: 0;
+}
+html { font-size: 62.5%} 
+body { font-size: 1.4rem;   font-weight: 200;}
+h1 {
+  font-size: 6.4rem;
+  font-size: 16vw;
+  text-align: center;
+  color: #000000;
+  font-weight: 100;
+}
+
+
+#container {
+  height: 100vh;
+}
+.bigCol {
+  width: 98vw;
+  margin-top: 8%;
+}
+.smallCol {
+  width: 1vw;
+}
+.centerImg img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+

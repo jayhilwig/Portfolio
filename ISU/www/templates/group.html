@@ -1,0 +1,69 @@
+<ion-nav-view name="group">
+<body ng-controller="cardCtrl">
+  <link href="css/groups.css" rel="stylesheet">
+  <ion-view title="Groups" right-buttons="rightButtons" left-buttons="addButtons">
+  <ion-content has-header="true" has-tabs="true" scroll="true">
+
+
+
+  <div class="list card" >
+    <div class="item item-divider groupHead item-icon-right">
+      Group A
+      <i class="icon ion-trash-b trashBtn"></i>
+    </div>
+    <ul class="list" >
+      <li class="{{allCards[0].colorDef}} item item-icon-right" ng-click="cardClick({{allCards[0]}}, '3')" >
+        {{allCards[0].head3}}<i class="icon {{allCards[0].cardsymbol3}} whiteIcon"></i>
+      </li>
+      <li class="{{allCards[2].colorDef}} item item-icon-right" ng-click="cardClick({{allCards[2]}}, '6')" >
+        {{allCards[2].head6}}<i class="icon {{allCards[2].cardsymbol6}} whiteIcon"></i>
+      </li>
+      <li class="{{allCards[2].colorDef}} item item-icon-right" ng-click="cardClick({{allCards[2]}}, '9')" >
+        {{allCards[2].head9}}<i class="icon {{allCards[2].cardsymbol9}} whiteIcon"></i>
+      </li>
+      <li class="{{allCards[3].colorDef}} item item-icon-right" ng-click="cardClick({{allCards[3]}}, '3')" >
+        {{allCards[3].head3}}<i class="icon {{allCards[3].cardsymbol3}} whiteIcon"></i>
+      </li>
+    </ul>
+  </div>
+
+  <div class="list card" >
+    <div class="item item-divider groupHead item-icon-right">
+      To try for Project X
+      <i class="icon ion-trash-b trashBtn"></i>
+    </div>
+    <ul class="list" >
+      <li class="{{allCards[1].colorDef}} item item-icon-right" ng-click="cardClick({{allCards[1]}}, '9')" >
+        {{allCards[1].head9}}<i class="icon {{allCards[1].cardsymbol9}} whiteIcon"></i>
+      </li>
+      <li class="{{allCards[1].colorDef}} item item-icon-right" ng-click="cardClick({{allCards[1]}}, '3')" >
+        {{allCards[1].head3}}<i class="icon {{allCards[1].cardsymbol3}} whiteIcon"></i>
+      </li>
+    </ul>
+  </div>
+
+  <div class="list card" >
+    <div class="item item-divider groupHead item-icon-right">
+      Old stuff I've used
+      <i class="icon ion-trash-b trashBtn"></i>
+    </div>
+    <ul class="list" >
+      <li class="{{allCards[3].colorDef}} item item-icon-right" ng-click="cardClick({{allCards[3]}}, '3')" >
+        {{allCards[3].head3}}<i class="icon {{allCards[3].cardsymbol3}} whiteIcon"></i>
+      </li>
+      <li class="{{allCards[0].colorDef}} item item-icon-right" ng-click="cardClick({{allCards[0]}}, '9')" >
+        {{allCards[0].head9}}<i class="icon {{allCards[0].cardsymbol9}} whiteIcon"></i>
+      </li>
+      <li class="{{allCards[1].colorDef}} item item-icon-right" ng-click="cardClick({{allCards[1]}}, '7')" >
+        {{allCards[1].head7}}<i class="icon {{allCards[1].cardsymbol7}} whiteIcon"></i>
+      </li>
+    </ul>
+  </div>
+
+  <div style="height:7vh"></div>
+
+
+</ion-content>
+</ion-view>
+</body>
+</ion-nav-view>

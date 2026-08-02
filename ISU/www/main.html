@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="main">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <title></title>
+
+  <!-- ionic css -->
+<link href="lib/css/ionic.css" rel="stylesheet">
+<link rel="stylesheet" href="lib/css/prototype-fonts.css">
+
+<!-- your app's css -->
+<link href="css/app.css" rel="stylesheet">
+<link href="css/cards.css" rel="stylesheet">
+
+<!-- ionic/angularjs scripts -->
+<script src="lib/js/ionic.bundle.js"></script>
+
+<!-- your app's script -->
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/app.js"></script>
+
+
+</head>
+
+  <!-- 
+    'starter' is the name of this angular module (js/app.js)
+  -->
+  <body ng-controller="AppCtrl" animation="no-animation" >
+<link ng-repeat="stylesheet in stylesheets" ng-href="css/{{stylesheet.href}}.css"  rel="stylesheet" />
+
+    <ion-nav-bar type="bar-light" 
+    animation="no-animation"
+    back-button-type="" 
+    back-button-icon=""
+    align-title="center"></ion-nav-bar>
+
+
+    <ion-nav-view></ion-nav-view>
+
+
+
+
+  </body>
+  </html>

@@ -1,0 +1,82 @@
+<ion-nav-view name="card0">
+
+<body ng-controller="cardCtrl" ng-app="">
+
+<ion-view title="Cards" right-buttons="rightButtons">
+
+
+<div class="bar bar-subheader"  ng-show="showSubheader" >
+  <div class="button-bar" >
+      <a href="#/tab/card0" class="button button-outline button-light insetBtn"><i class="icon"><img src="img/slider_icons1.svg" width="25vw"></i></a>
+      <a href="#/tab/card1" class="button button-outline button-light" ><i class="icon"><img src="img/slider_icons2.svg" width="32vw"></i></a>
+      <a href="#/tab/card2" class="button button-outline button-light"><i class="icon"><img src="img/slider_icons3.svg" width="32vw"></i></a>
+  </div>
+</div>
+
+<ion-content has-header="true" has-subheader="true" has-tabs="true" scroll="true" >
+
+        <ion-item ng-repeat="allCards in allCards" >
+
+        <div class="rotateText" ng-cloak>{{allCards.title}}</div>
+          
+
+            <ion-scroll direction="x">
+           
+			      <div ng-click="cardClick({{allCards}}, '0')" class="cardsymbol {{allCards.colorDef}}" item="cardsymbol" >
+              <i class="{{allCards.cardsymbol0}} card"></i> 
+            </div>
+            <div ng-click="cardClick({{allCards}}, '1')" class="cardsymbol {{allCards.colorDef}}" item="cardsymbol">
+              <i class="{{allCards.cardsymbol1}} card"></i> 
+            </div>
+            <div ng-click="cardClick({{allCards}}, '2')" class="cardsymbol {{allCards.colorDef}}" item="cardsymbol">
+              <i class="{{allCards.cardsymbol2}} card"></i> 
+            </div>
+            <div ng-click="cardClick({{allCards}}, '3')" class="cardsymbol {{allCards.colorDef}}" item="cardsymbol">
+              <i class="{{allCards.cardsymbol3}} card"></i> 
+            </div>
+            <div ng-click="cardClick({{allCards}}, '4')" class="cardsymbol {{allCards.colorDef}}" item="cardsymbol">
+              <i class="{{allCards.cardsymbol4}} card"></i> 
+            </div>
+            <div ng-click="cardClick({{allCards}}, '5')" class="cardsymbol {{allCards.colorDef}}" item="cardsymbol">
+              <i class="{{allCards.cardsymbol5}} card"></i> 
+            </div>
+            <div ng-click="cardClick({{allCards}}, '6')" class="cardsymbol {{allCards.colorDef}}" item="cardsymbol">
+              <i class="{{allCards.cardsymbol6}} card"></i> 
+            </div>
+            <div ng-click="cardClick({{allCards}}, '7')" class="cardsymbol {{allCards.colorDef}}" item="cardsymbol">
+              <i class="{{allCards.cardsymbol7}} card"></i> 
+            </div>
+            <div ng-click="cardClick({{allCards}}, '8')" class="cardsymbol {{allCards.colorDef}}" item="cardsymbol">
+              <i class="{{allCards.cardsymbol8}} card"></i> 
+            </div>
+            <div ng-click="cardClick({{allCards}}, '9')" class="cardsymbol {{allCards.colorDef}}" item="cardsymbol">
+              <i class="{{allCards.cardsymbol9}} card"></i> 
+            </div>
+            <div ng-click="cardClick({{allCards}}, '10')" class="cardsymbol {{allCards.colorDef}}" item="cardsymbol">
+              <i class="{{allCards.cardsymbol10}} card"></i> 
+            </div>
+            <div ng-click="cardClick({{allCards}}, '11')" class="cardsymbol {{allCards.colorDef}} {{allCards.hideSome11}}" item="cardsymbol">
+              <i class="{{allCards.cardsymbol11}} card"></i> 
+            </div>
+            <div ng-click="cardClick({{allCards}}, '12')" class="cardsymbol {{allCards.colorDef}} {{allCards.hideSome12}}" item="cardsymbol">
+              <i class="{{allCards.cardsymbol12}} card"></i> 
+            </div>
+            <div ng-click="cardClick({{allCards}}, '13')" class="cardsymbol {{allCards.colorDef}} {{allCards.hideSome13}}" item="cardsymbol">
+              <i class="{{allCards.cardsymbol13}} card"></i> 
+            </div>
+
+             </ion-scroll>
+          
+
+
+        </ion-item>
+       
+
+  </ion-content>
+
+
+
+</ion-view>
+</body>
+
+</ion-nav-view>

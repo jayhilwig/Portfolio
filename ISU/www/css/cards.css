@@ -1,0 +1,56 @@
+.cardsymbol {
+  display: inline-block; 
+  margin: 20px; 
+  border:1px solid black;
+  width:13vw;
+  text-align:center;
+}
+.cardsymbol1 {
+  display: inline-block; 
+  border:1px solid black;
+  text-align:center;
+}
+.card {
+  font-size: 3rem;
+}
+.card, .list-inset {
+  background: transparent;
+  color: white;
+}
+.rotateText {
+  transform:rotate(270deg);
+  -ms-transform:rotate(270deg); /* IE 9 */
+  -webkit-transform:rotate(270deg); /* Opera, Chrome, and Safari */
+  font-size:3rem; color:black; margin:0vh 61vw -5vh -24vw;
+}
+.scroll-view {
+  margin-left: 3.2vw; /**jay added**/
+}
+.hidden {
+display:none;
+}
+input[type="range"] {
+  background: url("img/slider_icons2.svg");
+  background-size:12vw 11.2vh;
+  background-repeat:no-repeat;
+  background-position:center; 
+  color: rgb(0, 0, 0) !important;
+  height:5vh;
+}
+.range-light {
+  width:100vw;
+  margin:-2vw;
+  padding:0vh 22vw;
+  background-position:center;
+  border: 0px;
+}
+.range.range-light input::-webkit-slider-thumb:before {
+    background: transparent;
+}
+.range input {
+  margin-right: -7vw;
+  margin-left: -7vw; 
+}
+.icon img {
+  vertical-align:middle;
+}

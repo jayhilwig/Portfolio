@@ -1,0 +1,308 @@
+<ion-nav-view name="card1">
+
+<body ng-controller="cardCtrl">
+<link href="css/cards1.css" rel="stylesheet">
+
+<ion-view title="Cards" right-buttons="rightButtons">
+
+<div class="bar bar-subheader" ng-show="showSubheader" >
+  <div class="button-bar">
+      <a ng-href="#/tab/card0" class="button button-outline button-light"><i class="icon"><img src="img/slider_icons1.svg" width="25vw"></i></a>
+      <a ng-href="#/tab/card1" class="button button-outline button-light insetBtn"><i class="icon"><img src="img/slider_icons2.svg" width="32vw"></i></a>
+      <a ng-href="#/tab/card2" class="button button-outline button-light"><i class="icon"><img src="img/slider_icons3.svg" width="32vw"></i></a>
+  </div>
+</div>
+
+
+
+<ion-content has-header="true" has-subheader="true" has-tabs="true" scroll="false" >
+
+<div class="row" style="height:14vh">
+  <div class="col-20"></div>
+
+  <div class="col cardsymbol1 learnColor insetBtnBlk" item="cardsymbol" ng-style="learnColor" 
+  ng-click="learnColor={boxShadow: 'inset 0 0 10px#555'}; lookColor={boxShadow: 'none'}; askColor={boxShadow: 'none'}; tryColor={boxShadow: 'none'}; 
+  learnRow={display:'visible'}; lookRow={display:'none'}; askRow={display:'none'}; tryRow={display:'none'}">
+        <i class="card" >Le</i> 
+    </div>
+  <div class="col cardsymbol1 lookColor" item="cardsymbol" ng-style="lookColor" 
+  ng-click="learnColor={boxShadow: 'none'}; lookColor={boxShadow: 'inset 0 0 10px#555'}; askColor={boxShadow: 'none'}; tryColor={boxShadow: 'none'}; 
+  lookRow={display:'visible'}; learnRow={display:'none'}; askRow={display:'none'}; tryRow={display:'none'}">
+    <i class="card">Lo</i> 
+  </div>
+
+  <div class="col cardsymbol1 askColor" item="cardsymbol"  ng-style="askColor" 
+    ng-click="learnColor={boxShadow: 'none'}; lookColor={boxShadow: 'none'}; askColor={boxShadow: 'inset 0 0 10px#555'}; tryColor={boxShadow: 'none'}; 
+    askRow={display:'visible'}; learnRow={display:'none'}; lookRow={display:'none'}; tryRow={display:'none'}">
+    <i class="card">A</i> 
+  </div>
+
+  <div class="col cardsymbol1 tryColor" item="cardsymbol"  ng-style="tryColor" 
+    ng-click="learnColor={boxShadow: 'none'}; lookColor={boxShadow: 'none'}; askColor={boxShadow: 'none'}; tryColor={boxShadow: 'inset 0 0 10px#555'}; 
+    tryRow={display:'visible'}; learnRow={display:'none'}; lookRow={display:'none'}; askRow={display:'none'}">
+    <i class="card">T</i> 
+  </div>
+
+
+  <div class="col-20"></div>
+</div>
+
+<ion-item ng-repeat="allCards in allCards" ng-style="{{allCards.rowShow}}">
+  <ion-scroll direction="x">
+
+<div class="row" style="height:62vh; margin-bottom:200px">
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}}" ng-cloak>
+    <div class="cardHead">
+      {{allCards.head0}}
+      <i class="{{allCards.cardsymbol0}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content0}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB0}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot0}}
+    </div>
+  </div>
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}}" ng-cloak>
+
+    <div class="cardHead">
+      {{allCards.head1}}
+      <i class="{{allCards.cardsymbol1}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content1}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB1}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot1}}
+    </div>
+	
+  </div>
+
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}}">
+    <div class="cardHead">
+      {{allCards.head2}}
+      <i class="{{allCards.cardsymbol2}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content2}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB2}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot2}}
+    </div>
+  </div>
+
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}}">
+    <div class="cardHead">
+      {{allCards.head3}}
+      <i class="{{allCards.cardsymbol3}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content3}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB3}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot3}}
+    </div>
+  </div>
+
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}}">
+    <div class="cardHead">
+      {{allCards.head4}}
+      <i class="{{allCards.cardsymbol4}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content4}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB4}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot4}}
+    </div>
+  </div>
+
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}}">
+    <div class="cardHead">
+      {{allCards.head5}}
+      <i class="{{allCards.cardsymbol5}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content5}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB5}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot5}}
+    </div>
+  </div>
+
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}}">
+    <div class="cardHead">
+      {{allCards.head6}}
+      <i class="{{allCards.cardsymbol6}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content6}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB6}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot6}}
+    </div>
+  </div>
+
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}}">
+    <div class="cardHead">
+      {{allCards.head7}}
+      <i class="{{allCards.cardsymbol7}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content7}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB7}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot7}}
+    </div>
+  </div>
+
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}}">
+    <div class="cardHead">
+      {{allCards.head8}}
+      <i class="{{allCards.cardsymbol8}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content8}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB8}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot8}}
+    </div>
+  </div>
+
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}}">
+    <div class="cardHead">
+      {{allCards.head9}}
+      <i class="{{allCards.cardsymbol9}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content9}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB9}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot9}}
+    </div>
+  </div>
+
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}}">
+    <div class="cardHead">
+      {{allCards.head10}}
+      <i class="{{allCards.cardsymbol10}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content10}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB10}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot10}}
+    </div>
+  </div>
+
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}} {{allCards.hideSome13}}">
+    <div class="cardHead">
+      {{allCards.head11}}
+      <i class="{{allCards.cardsymbol11}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content11}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB11}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot11}}
+    </div>
+  </div>
+
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}} {{allCards.hideSome13}}">
+    <div class="cardHead">
+      {{allCards.head12}}
+      <i class="{{allCards.cardsymbol12}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content12}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB12}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot12}}
+    </div>
+  </div>
+
+
+  <div class="col-90 cardsymbol large1 {{allCards.colorDef}} {{allCards.fabricDef}} {{allCards.hideSome13}}">
+    <div class="cardHead">
+      {{allCards.head13}}
+      <i class="{{allCards.cardsymbol13}} lgSymbol"></i> 
+    </div>
+    <div class="cardContent" >
+      {{allCards.content13}}
+    </div>
+    <div class="cardContent" >
+      {{allCards.contentB13}}
+    </div>
+    <div class="cardFoot" >
+      {{allCards.foot13}}
+    </div>
+  </div>
+
+</div>
+ </div>
+
+  </ion-scroll>
+</ion-item>
+
+
+</ion-content>
+
+
+
+</ion-view>
+
+</body>
+
+</ion-nav-view>
