@@ -35,8 +35,8 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Inter";
-  src: url("fonts/Inter-VariableFont_opsz,wght.woff2") format("woff2");
+  font-family: "Inter Tight";
+  src: url("fonts/InterTight-VariableFont_wght.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -65,7 +65,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Inter, system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
   font-size: 14px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -162,7 +162,7 @@ h3,
 .cv-label,
 .footer-mark,
 .kicker {
-  font-family: "FT Regola Neue", Inter, sans-serif;
+  font-family: "FT Regola Neue", "Inter Tight", sans-serif;
   letter-spacing: -0.015em;
 }
 .brand {
@@ -501,7 +501,7 @@ h1 {
   background: #fff;
 }
 .stat-number {
-  font-family: "FT Regola Neue", Inter, sans-serif;
+  font-family: "FT Regola Neue", "Inter Tight", sans-serif;
   font-size: clamp(2rem, 4vw, 3.2rem);
   line-height: 1;
   margin-bottom: 10px;
@@ -518,7 +518,7 @@ h1 {
   align-items: start;
 }
 .title {
-  font-family: "FT Regola Neue", Inter, sans-serif;
+  font-family: "FT Regola Neue", "Inter Tight", sans-serif;
   font-size: 1.08rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -854,7 +854,7 @@ h2 {
   margin: 0;
   max-width: none;
   white-space: nowrap;
-  font-family: "FT Regola Neue", Inter, sans-serif;
+  font-family: "FT Regola Neue", "Inter Tight", sans-serif;
   font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1.02;
   letter-spacing: -0.015em;
@@ -882,7 +882,7 @@ h2 {
 }
 .ai-experiment-card h4 {
   margin: 0 0 10px;
-  font-family: "FT Regola Neue", Inter, sans-serif;
+  font-family: "FT Regola Neue", "Inter Tight", sans-serif;
   font-size: clamp(1.45rem, 3vw, 2.2rem);
   line-height: 1.06;
   letter-spacing: -0.015em;
@@ -989,7 +989,7 @@ h2 {
 }
 .lead-text,
 .muted-title {
-  font-family: "FT Regola Neue", Inter, sans-serif;
+  font-family: "FT Regola Neue", "Inter Tight", sans-serif;
   font-size: clamp(1.55rem, 3vw, 2.4rem);
   line-height: 1.08;
   letter-spacing: -0.015em;
@@ -1002,7 +1002,7 @@ h2 {
   gap: 12px;
   margin-top: 32px;
   color: var(--link);
-  font-family: Inter, system-ui, sans-serif;
+  font-family: "Inter Tight", system-ui, sans-serif;
   font-weight: 400;
   font-size: 1rem;
   text-decoration: none;
@@ -1068,7 +1068,7 @@ h2 {
   font-size: 1.08rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-  font-family: "FT Regola Neue", Inter, sans-serif;
+  font-family: "FT Regola Neue", "Inter Tight", sans-serif;
 }
 .project-desc {
   color: #444;
@@ -1115,7 +1115,7 @@ h2 {
   margin-top: 28px;
 }
 .cv-bucket-label {
-  font-family: "FT Regola Neue", Inter, sans-serif;
+  font-family: "FT Regola Neue", "Inter Tight", sans-serif;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -1135,7 +1135,7 @@ h2 {
   font-size: 1.08rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-  font-family: "FT Regola Neue", Inter, sans-serif;
+  font-family: "FT Regola Neue", "Inter Tight", sans-serif;
   color: #111;
   display: flex;
   align-items: center;
@@ -1240,7 +1240,7 @@ h2 {
 }
 blockquote {
   margin: 0;
-  font-family: "FT Regola Neue", Inter, sans-serif;
+  font-family: "FT Regola Neue", "Inter Tight", sans-serif;
   font-size: clamp(1.5rem, 3vw, 2.6rem);
   line-height: 1.12;
   letter-spacing: -0.01em;
@@ -1248,7 +1248,7 @@ blockquote {
   font-style: italic;
 }
 blockquote em {
-  font-family: "FT Regola Neue", Inter, sans-serif;
+  font-family: "FT Regola Neue", "Inter Tight", sans-serif;
   font-style: italic;
   font-size: 1.05rem;
   letter-spacing: -0.01em;
@@ -1325,7 +1325,7 @@ blockquote em {
 .tf-stat span,
 .tf-table th,
 .tf-map-badge {
-  font-family: "FT Regola Neue", Inter, sans-serif;
+  font-family: "FT Regola Neue", "Inter Tight", sans-serif;
   letter-spacing: -0.015em;
 }
 .tf-kicker {
@@ -1482,7 +1482,7 @@ blockquote em {
   width: 100%;
   max-width: none;
   color: var(--text);
-  font-family: "FT Regola Neue", Inter, sans-serif;
+  font-family: "FT Regola Neue", "Inter Tight", sans-serif;
   font-size: clamp(1.55rem, 3vw, 2.4rem);
   line-height: 1.08;
   letter-spacing: -0.015em;
@@ -1538,6 +1538,12 @@ blockquote em {
 .tf-rating-cell {
   width: 22%;
   white-space: nowrap;
+}
+.tf-stars {
+  color: var(--accent);
+}
+.tf-star-empty {
+  color: rgba(0, 0, 0, 0.18);
 }
 .tf-rating-bar {
   display: inline-flex;

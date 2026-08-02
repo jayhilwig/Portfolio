@@ -72,7 +72,7 @@
     />
     <link
       rel="preload"
-      href="fonts/Inter-VariableFont_opsz,wght.woff2"
+        href="fonts/InterTight-VariableFont_wght.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -1793,6 +1793,10 @@
         );
       }
 
+      function getSortedItems(category) {
+        return [...category.items].sort((a, b) => b[2] - a[2]);
+      }
+
       function renderTabs() {
         tabs.innerHTML = categories
           .map(
@@ -1816,7 +1820,7 @@
         const introText = category.intro;
         categoryIntro.textContent = introText;
         tableCaption.textContent = `${category.label} technology fluency`;
-        rows.innerHTML = category.items
+        rows.innerHTML = getSortedItems(category)
           .map(
             ([name, description, level]) => `
           <tr>
@@ -1867,7 +1871,7 @@
             <div class="tf-map-badge">${category.items.length} items</div>
           </div>
           <div class="tf-skill-bars">
-            ${category.items
+            ${getSortedItems(category)
               .map(
                 ([name, description, level]) => `
               <article class="tf-skill-card" style="--score: ${level};">
