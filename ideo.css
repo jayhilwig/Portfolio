@@ -428,6 +428,55 @@ body.case-ideo .kicker {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   background: var(--ideo-paper);
 }
+.ideo-pdf-section {
+  margin-top: 56px;
+}
+.ideo-pdf-section h3 {
+  margin: 8px 0 20px;
+}
+.ideo-pdf-viewer {
+  border: 1px solid var(--ideo-line);
+  background: #ecebe7;
+}
+.ideo-pdf-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--ideo-line);
+  background: var(--ideo-paper);
+  font-size: 0.9rem;
+}
+.ideo-pdf-toolbar button {
+  border: 1px solid var(--ideo-line);
+  background: #fff;
+  color: var(--ideo-ink);
+  padding: 4px 10px;
+  cursor: pointer;
+}
+.ideo-pdf-toolbar button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+.ideo-pdf-download {
+  margin-left: 12px;
+  color: var(--ideo-teal);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.ideo-pdf-canvas-wrap {
+  overflow: visible;
+  padding: 18px;
+  text-align: center;
+}
+.ideo-pdf-canvas-wrap canvas {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
 
 .ideo-section h2 {
   margin: 0;

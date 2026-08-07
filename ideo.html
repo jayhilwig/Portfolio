@@ -405,6 +405,28 @@
             </p>
           </article>
         </div>
+
+        <div class="ideo-container ideo-pdf-section">
+          <div class="kicker">Full case study</div>
+          <h3>Read the complete capstone report</h3>
+          <div class="ideo-pdf-viewer" data-pdf-src="public/images/Jay_Hilwig_MS_HCI_Capstone_2014.pdf">
+            <div class="ideo-pdf-toolbar" aria-label="PDF controls">
+              <button type="button" data-pdf-prev aria-label="Previous PDF page">←</button>
+              <span><span data-pdf-page>1</span> / <span data-pdf-count>Loading…</span></span>
+              <button type="button" data-pdf-next aria-label="Next PDF page">→</button>
+              <a
+                class="ideo-pdf-download"
+                href="public/images/Jay_Hilwig_MS_HCI_Capstone_2014.pdf"
+                download="Jay_Hilwig_MS_HCI_Capstone_2014.pdf"
+              >
+                Download PDF
+              </a>
+            </div>
+            <div class="ideo-pdf-canvas-wrap">
+              <canvas aria-label="Rendered capstone report page"></canvas>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="ideo-section ideo-reflection" id="reflections">
@@ -446,6 +468,64 @@
     <script src="lite-light.js"></script>
     <script>
       window.initLiteLight?.();
+
+      (() => {
+        const viewer = document.querySelector(".ideo-pdf-viewer");
+        if (!viewer) return;
+        const canvas = viewer.querySelector("canvas");
+        const pageLabel = viewer.querySelector("[data-pdf-page]");
+        const countLabel = viewer.querySelector("[data-pdf-count]");
+        const prev = viewer.querySelector("[data-pdf-prev]");
+        const next = viewer.querySelector("[data-pdf-next]");
+        let pdfDoc;
+        let pageNumber = 1;
+
+        const loadPdfJs = () =>
+          new Promise((resolve, reject) => {
+            if (window.pdfjsLib) return resolve(window.pdfjsLib);
+            const script = document.createElement("script");
+            script.src = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js";
+            script.onload = () => {
+              window.pdfjsLib.GlobalWorkerOptions.workerSrc =
+                "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+              resolve(window.pdfjsLib);
+            };
+            script.onerror = reject;
+            document.head.appendChild(script);
+          });
+
+        const renderPage = async () => {
+          const page = await pdfDoc.getPage(pageNumber);
+          const base = page.getViewport({ scale: 1 });
+          const width = Math.min(viewer.querySelector(".ideo-pdf-canvas-wrap").clientWidth - 24, 980);
+          const viewport = page.getViewport({ scale: width / base.width });
+          canvas.width = viewport.width;
+          canvas.height = viewport.height;
+          await page.render({ canvasContext: canvas.getContext("2d"), viewport }).promise;
+          pageLabel.textContent = pageNumber;
+          prev.disabled = pageNumber <= 1;
+          next.disabled = pageNumber >= pdfDoc.numPages;
+        };
+
+        loadPdfJs()
+          .then((pdfjsLib) => pdfjsLib.getDocument(viewer.dataset.pdfSrc).promise)
+          .then((doc) => {
+            pdfDoc = doc;
+            countLabel.textContent = doc.numPages;
+            return renderPage();
+          })
+          .catch(() => {
+            countLabel.textContent = "Unavailable";
+          });
+
+        prev.addEventListener("click", () => {
+          if (pageNumber > 1) { pageNumber -= 1; renderPage(); }
+        });
+        next.addEventListener("click", () => {
+          if (pdfDoc && pageNumber < pdfDoc.numPages) { pageNumber += 1; renderPage(); }
+        });
+        window.addEventListener("resize", () => pdfDoc && renderPage());
+      })();
 
       document.addEventListener("click", (event) => {
         if (!(event.target instanceof Element)) return;
