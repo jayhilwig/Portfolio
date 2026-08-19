@@ -842,7 +842,7 @@
               <span class="accordion-plus">+</span>
             </summary>
             <div class="accordion-content">
-              Designed self-service and guided investigation workflows that reduced frozen-account resolution time from days to <strong>~5 minutes</strong>, while lowering false positives by <strong>2%</strong> and false negatives by <strong>5%</strong>. This is also one of the strongest places to talk about how you worked with machine learning in production.
+              Designed self-service and guided investigation workflows that reduced frozen-account resolution time from days to <strong>~5 minutes</strong>, while lowering false positives by <strong>2%</strong> and false negatives by <strong>5%</strong>.
             </div>
           </details>
 
