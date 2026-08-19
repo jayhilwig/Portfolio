@@ -681,6 +681,27 @@ h1 {
   padding: 96px 0;
   margin-top: 56px;
 }
+.work--earlier {
+  padding-block: 56px;
+}
+.work--earlier .section-head {
+  margin-bottom: 32px;
+}
+.work--earlier h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+}
+.work--earlier .lead-text {
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+}
+.work--earlier .feature-grid > :last-child {
+  max-width: 640px;
+}
+.work--earlier .project-row {
+  padding-block: 12px;
+}
+.work--earlier .case-study-link {
+  margin-top: 24px;
+}
 .section-head {
   margin-bottom: 72px;
   margin-top: 0;
@@ -1281,7 +1302,7 @@ blockquote em {
   aspect-ratio: auto;
   /* remove forced 16:9 */
   padding: 0;
-  border: 1px dashed rgba(0, 0, 0, 0.18);
+  border: 1px dashed var(--link);
   background: transparent;
   box-sizing: border-box;
   max-width: 100%;
