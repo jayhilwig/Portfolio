@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Microsoft Clarity icon</title>
+  <desc id="desc">Vector recreation of the Microsoft Clarity site icon.</desc>
+  <defs>
+    <clipPath id="clarity-shape">
+      <path d="M127.9 16c-6.3 0-11.7 3.3-15 9L1.9 220.1C-4.1 230.7 3.5 241 15.7 241h224.6c12.3 0 19.9-10.4 13.7-21L143 25c-3.2-5.7-8.7-9-15.1-9Z"/>
+    </clipPath>
+    <linearGradient id="top" x1="88" y1="28" x2="173" y2="149" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9ed7ff"/>
+      <stop offset="0.52" stop-color="#63bdf1"/>
+      <stop offset="1" stop-color="#2e86df"/>
+    </linearGradient>
+    <linearGradient id="mid" x1="178" y1="99" x2="143" y2="229" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#398bdc"/>
+      <stop offset="1" stop-color="#1c63c8"/>
+    </linearGradient>
+    <linearGradient id="low" x1="80" y1="160" x2="153" y2="246" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1553b8"/>
+      <stop offset="0.7" stop-color="#1f5dbc"/>
+      <stop offset="1" stop-color="#416fca"/>
+    </linearGradient>
+  </defs>
+
+  <g clip-path="url(#clarity-shape)">
+    <rect width="256" height="256" fill="url(#top)"/>
+    <path d="M47 142 188 102 256 220 256 256 212 256Z" fill="url(#mid)"/>
+    <path d="M47 142 256 233 246 256H0V224Z" fill="url(#low)"/>
+  </g>
+</svg>

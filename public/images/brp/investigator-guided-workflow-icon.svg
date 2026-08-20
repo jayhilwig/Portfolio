@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Investigator guided workflow</title>
+  <desc id="desc">A simplified guided decision panel with grouped choices and a review marker.</desc>
+  <rect x="18" y="12" width="92" height="104" rx="7" fill="#0c1719" stroke="#6fd4e0" stroke-width="4"/>
+  <path d="M32 31h43" fill="none" stroke="#d5ede5" stroke-linecap="round" stroke-width="5"/>
+  <circle cx="93" cy="31" r="8" fill="#172513" stroke="#c6ff5f" stroke-width="3"/>
+  <path d="m89.5 31 2.5 2.5 4.5-5" fill="none" stroke="#c6ff5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+  <rect x="30" y="46" width="68" height="18" rx="3" fill="#111f21" stroke="#526461" stroke-width="2"/>
+  <circle cx="41" cy="55" r="4" fill="none" stroke="#aab7b3" stroke-width="2"/>
+  <path d="M52 55h34" fill="none" stroke="#d5ede5" stroke-linecap="round" stroke-width="3"/>
+  <rect x="30" y="70" width="68" height="18" rx="3" fill="#172513" stroke="#c6ff5f" stroke-width="2"/>
+  <circle cx="41" cy="79" r="4" fill="#c6ff5f"/>
+  <path d="M52 79h29" fill="none" stroke="#d5ede5" stroke-linecap="round" stroke-width="3"/>
+  <rect x="30" y="94" width="68" height="10" rx="3" fill="#111f21" stroke="#526461" stroke-width="2"/>
+</svg>

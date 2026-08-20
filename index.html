@@ -191,7 +191,7 @@
         <div class="container hero-grid">
           <div>
             <div class="eyebrow">Product designer</div>
-            <h1>Designing clarity in complex systems.</h1>
+            <h1>Designing <span class="hero-clarity">clarity</span> in <span class="hero-complex" data-text="complex">complex</span> systems.</h1>
           </div>
 
           <div class="hero-side">
@@ -240,10 +240,13 @@
                 <span class="accordion-plus">+</span>
               </summary>
               <div class="accordion-content">
-                Designed self-service and guided investigation workflows that
-                reduced frozen-account resolution time from 2–3 days to
-                <strong>~5 minutes</strong>, while lowering false positives by
-                <strong>2%</strong> and false negatives by <strong>5%</strong>.
+                Account resolution improved from
+                <strong>2–3 days → ~5 min.</strong>, with
+                <strong>−2% false positives</strong> and
+                <strong>−5% false negatives</strong>.
+                <a href="amazon-buyer-risk-prevention.html"
+                  >View the case study.</a
+                >
               </div>
             </details>
 
@@ -264,22 +267,20 @@
 
       <section id="work" class="work">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head section-head--case-study">
             <div class="kicker">Case study</div>
             <h2>Amazon Transparency</h2>
+            <p class="lead-text">
+              Customer touchpoints across Search, Detail Pages, Progress
+              Tracker, and Amazon Lens contributed to a 2% increase in purchase
+              rates and 6% fewer returns for enrolled products.*
+            </p>
+            <p class="footnote-text">
+              *For brands and products enrolled in the Transparency program.
+            </p>
           </div>
 
-          <div class="feature-grid">
-            <div>
-              <p class="lead-text">
-                Customer touchpoints across Search, Detail Pages, Progress
-                Tracker, and Amazon Lens contributed to a 2% increase in purchase
-                rates and 6% fewer returns for enrolled products.*
-              </p>
-              <p class="footnote-text">
-                *For brands and products enrolled in the Transparency program.
-              </p>
-            </div>
+          <div class="feature-grid feature-grid--case-study">
             <div>
               <a
                 class="case-study-media-link"
@@ -362,19 +363,198 @@
 
       <section class="work">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head section-head--case-study">
             <div class="kicker">Case study</div>
-            <h2>Aloft Appraisal</h2>
+            <h2>Amazon Buyer Risk Prevention</h2>
+            <p class="lead-text">
+              Connected customer recovery, investigator decision support,
+              and structured data across a high-stakes risk system.
+            </p>
           </div>
 
-          <div class="feature-grid">
+          <div class="feature-grid feature-grid--case-study">
             <div>
-              <p class="lead-text">
-                Reduced friction across a fragmented appraisal workflow with
-                reviewable automation, decision support, and report-ready output.
-              </p>
-            </div>
+              <a
+                class="case-study-media-link"
+                href="amazon-buyer-risk-prevention.html"
+                aria-label="View Amazon Buyer Risk Prevention case study"
+              >
+                <div class="case-study-media case-study-media--brp">
+                  <div class="case-study-placeholder case-study-placeholder--brp">
+                    <div class="case-study-placeholder-mark">
+                      <svg
+                        class="brp-home-system-map"
+                        viewBox="0 0 1080 500"
+                        role="img"
+                        aria-label="Buyer Risk Prevention system map"
+                        aria-describedby="brp-home-map-desc"
+                      >
+                        <desc id="brp-home-map-desc">
+                          A customer moves from a risk signal and restriction
+                          into self-service or customer-service support.
+                          Investigators review unresolved cases, record
+                          decisions, and create structured data that informs
+                          future system improvements.
+                        </desc>
+                        <defs>
+                          <linearGradient id="brp-home-line" x1="0" x2="1">
+                            <stop offset="0" stop-color="#6fd4e0"></stop>
+                            <stop offset="1" stop-color="#c6ff5f"></stop>
+                          </linearGradient>
+                          <filter id="brp-home-glow" x="-60%" y="-60%" width="220%" height="220%">
+                            <feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur>
+                            <feMerge>
+                              <feMergeNode in="blur"></feMergeNode>
+                              <feMergeNode in="SourceGraphic"></feMergeNode>
+                            </feMerge>
+                          </filter>
+                        </defs>
 
+                        <g class="brp-home-map-grid" aria-hidden="true">
+                          <path d="M40 100H1040M40 200H1040M40 300H1040M40 400H1040"></path>
+                          <path d="M180 40V460M360 40V460M540 40V460M720 40V460M900 40V460"></path>
+                        </g>
+
+                        <g class="brp-home-map-links" aria-hidden="true">
+                          <path d="M142 250H200"></path>
+                          <path d="M324 250H370"></path>
+                          <path d="M488 250C520 250 520 150 550 150"></path>
+                          <path d="M488 250C520 250 520 350 550 350"></path>
+                          <path d="M674 150C720 150 716 250 760 250"></path>
+                          <path d="M684 350C724 350 720 250 760 250"></path>
+                          <path d="M884 250H944"></path>
+                          <path d="M994 286C994 412 780 438 626 414"></path>
+                          <path d="M626 414C466 394 350 350 266 302"></path>
+                        </g>
+
+                        <g class="brp-home-map-node brp-home-map-node--customer">
+                          <rect x="42" y="214" width="100" height="72" rx="2"></rect>
+                          <text x="92" y="246" text-anchor="middle">Customer</text>
+                          <text class="brp-home-node-note" x="92" y="266" text-anchor="middle">needs access</text>
+                        </g>
+                        <g class="brp-home-map-node">
+                          <rect x="200" y="214" width="124" height="72" rx="2"></rect>
+                          <text x="262" y="246" text-anchor="middle">Risk signal</text>
+                          <text class="brp-home-node-note" x="262" y="266" text-anchor="middle">restriction</text>
+                        </g>
+                        <g class="brp-home-map-node brp-home-map-node--active" filter="url(#brp-home-glow)">
+                          <rect x="370" y="208" width="118" height="84" rx="2"></rect>
+                          <text x="429" y="244" text-anchor="middle">Recovery</text>
+                          <text class="brp-home-node-note" x="429" y="266" text-anchor="middle">trusted path</text>
+                        </g>
+                        <g class="brp-home-map-node">
+                          <rect x="550" y="94" width="124" height="112" rx="2"></rect>
+                          <image
+                            class="brp-home-node-icon"
+                            href="public/images/brp/self-service-structured-input-icon.svg"
+                            x="596"
+                            y="104"
+                            width="32"
+                            height="32"
+                            aria-hidden="true"
+                          ></image>
+                          <text x="612" y="166" text-anchor="middle">Self-service</text>
+                          <text class="brp-home-node-note" x="612" y="187" text-anchor="middle">structured input</text>
+                        </g>
+                        <g class="brp-home-map-node">
+                          <rect x="550" y="312" width="134" height="76" rx="2"></rect>
+                          <text x="617" y="345" text-anchor="middle">Customer service</text>
+                          <text class="brp-home-node-note" x="617" y="366" text-anchor="middle">human fallback</text>
+                        </g>
+                        <g class="brp-home-map-node">
+                          <rect x="760" y="194" width="124" height="112" rx="2"></rect>
+                          <image
+                            class="brp-home-node-icon"
+                            href="public/images/brp/investigator-guided-workflow-icon.svg"
+                            x="806"
+                            y="204"
+                            width="32"
+                            height="32"
+                            aria-hidden="true"
+                          ></image>
+                          <text x="822" y="266" text-anchor="middle">Investigator</text>
+                          <text class="brp-home-node-note" x="822" y="287" text-anchor="middle">expert judgment</text>
+                        </g>
+                        <g class="brp-home-map-node brp-home-map-node--decision">
+                          <rect x="944" y="214" width="100" height="72" rx="2"></rect>
+                          <text x="994" y="246" text-anchor="middle">Decision</text>
+                          <text class="brp-home-node-note" x="994" y="266" text-anchor="middle">next step</text>
+                        </g>
+                        <g class="brp-home-feedback-label" aria-hidden="true">
+                          <text x="626" y="439">STRUCTURED CONTEXT → ANALYSIS → WORKFLOW IMPROVEMENT</text>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+              <div class="project-table project-table--no-top">
+                <article class="project-row">
+                  <div>
+                    <div class="project-title">Customer recovery</div>
+                    <div class="project-desc">
+                      Designed self-service paths that explained why information was needed and when a person would step in.
+                    </div>
+                  </div>
+                  <div class="project-meta">Trust + self-service</div>
+                </article>
+
+                <article class="project-row">
+                  <div>
+                    <div class="project-title">Investigator workflows</div>
+                    <div class="project-desc">
+                      Structured procedures as guided questions while
+                      preserving context, escalation, and expert judgment.
+                    </div>
+                  </div>
+                  <div class="project-meta">Decision support</div>
+                </article>
+
+                <article class="project-row">
+                  <div>
+                    <div class="project-title">Human + automation boundary</div>
+                    <div class="project-desc">
+                      Created an exit path from automation when evidence was
+                      inconclusive, connecting decisions back to reusable data.
+                    </div>
+                  </div>
+                  <div class="project-meta">Human-centered automation</div>
+                </article>
+
+                <a
+                  class="case-study-link"
+                  href="amazon-buyer-risk-prevention.html"
+                  aria-label="View Amazon Buyer Risk Prevention case study"
+                >
+                  <span class="arrow-mark" aria-hidden="true">
+                    <svg viewBox="0 0 32 32" role="img" focusable="false">
+                      <path
+                        d="M8 7H25V24H19.6V16.2L10.8 25L7 21.2L15.8 12.4H8V7Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                  <span>View case study</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="work">
+        <div class="container">
+          <div class="section-head section-head--case-study">
+            <div class="kicker">Case study</div>
+            <h2>Aloft Appraisal</h2>
+            <p class="lead-text">
+              Reduced friction across a fragmented appraisal workflow with
+              reviewable automation, decision support, and report-ready output.
+            </p>
+          </div>
+
+          <div class="feature-grid feature-grid--case-study">
             <div>
               <a
                 class="case-study-media-link"
@@ -412,9 +592,7 @@
                       AI-assisted appraisal workflows
                     </div>
                     <div class="project-desc">
-                      Redesigned appraisal tooling around AI-supported field
-                      population, auto-calculations, and workflow guidance to
-                      reduce repetitive manual entry.
+                      Redesigned appraisal tooling with AI-supported field population, auto-calculations, and workflow guidance to reduce manual entry.
                     </div>
                   </div>
                   <div class="project-meta">AI-assisted workflows</div>
@@ -424,9 +602,7 @@
                   <div>
                     <div class="project-title">Decision-support interfaces</div>
                     <div class="project-desc">
-                      Introduced visual comparison systems, color coding, and
-                      contextual data layouts to help appraisers make faster,
-                      more accurate decisions.
+                      Introduced visual comparison systems, color coding, and contextual layouts to help appraisers make faster, accurate decisions.
                     </div>
                   </div>
                   <div class="project-meta">Data visualization</div>
@@ -436,9 +612,7 @@
                   <div>
                     <div class="project-title">Operational efficiency</div>
                     <div class="project-desc">
-                      Helped compress appraisal processing time from 2–4 hours
-                      to roughly 45–60 minutes while improving workflow
-                      consistency and usability.
+                      Helped compress appraisal processing time from 2–4 hours to roughly 45–60 minutes while improving consistency and usability.
                     </div>
                   </div>
                   <div class="project-meta">Workflow automation</div>
@@ -467,19 +641,16 @@
 
       <section class="work work--earlier">
         <div class="container">
-          <div class="section-head">
+          <div class="section-head section-head--case-study">
             <div class="kicker">Selected earlier work</div>
             <h2>IDEO Method Cards</h2>
+            <p class="lead-text">
+              An academic redesign focused on navigation, hierarchy, and
+              clarity.
+            </p>
           </div>
 
-          <div class="feature-grid">
-            <div>
-              <p class="lead-text">
-                An academic redesign focused on navigation, hierarchy, and
-                clarity.
-              </p>
-            </div>
-
+          <div class="feature-grid feature-grid--case-study">
             <div>
               <a
                 class="case-study-media-link"
@@ -577,6 +748,67 @@
               Designing AI products from interaction and structured outputs
               through model routing, data flows, and working prototypes.
             </p>
+          </div>
+
+          <div class="tf-tool-carousel" role="region" aria-label="Tools and platforms">
+            <div class="tf-tool-carousel-viewport" id="tf-tool-carousel-track" tabindex="0">
+              <div class="tf-tool-carousel-motion">
+              <ul class="tf-tool-carousel-track">
+                <li class="tf-tool-carousel-item">
+                  <span class="tf-tool-carousel-mark tf-tool-carousel-mark--crop"><img src="public/images/tool_icons/Apify.svg" alt="" /></span>
+                  <span>Apify</span>
+                </li>
+                <li class="tf-tool-carousel-item">
+                  <span class="tf-tool-carousel-mark"><img src="public/images/tool_icons/Cloudflare.svg" alt="" /></span>
+                  <span>Cloudflare</span>
+                </li>
+                <li class="tf-tool-carousel-item">
+                  <span class="tf-tool-carousel-mark"><img src="public/images/tool_icons/expo.svg" alt="" /></span>
+                  <span>Expo</span>
+                </li>
+                <li class="tf-tool-carousel-item">
+                  <span class="tf-tool-carousel-mark"><img src="public/images/tool_icons/github.svg" alt="" /></span>
+                  <span>GitHub</span>
+                </li>
+                <li class="tf-tool-carousel-item">
+                  <span class="tf-tool-carousel-mark"><img src="public/images/tool_icons/microsoft.svg" alt="" /></span>
+                  <span>Microsoft Clarity</span>
+                </li>
+                <li class="tf-tool-carousel-item">
+                  <span class="tf-tool-carousel-mark tf-tool-carousel-mark--crop"><img src="public/images/tool_icons/OpenAI.svg" alt="" /></span>
+                  <span>OpenAI Codex</span>
+                </li>
+                <li class="tf-tool-carousel-item">
+                  <span class="tf-tool-carousel-mark"><img src="public/images/tool_icons/openrouter.svg" alt="" /></span>
+                  <span>OpenRouter</span>
+                </li>
+                <li class="tf-tool-carousel-item">
+                  <span class="tf-tool-carousel-mark"><img src="public/images/tool_icons/Railway.svg" alt="" /></span>
+                  <span>Railway</span>
+                </li>
+                <li class="tf-tool-carousel-item">
+                  <span class="tf-tool-carousel-mark tf-tool-carousel-mark--crop"><img src="public/images/tool_icons/resend.svg" alt="" /></span>
+                  <span>Resend</span>
+                </li>
+                <li class="tf-tool-carousel-item">
+                  <span class="tf-tool-carousel-mark tf-tool-carousel-mark--crop tf-tool-carousel-mark--stripe"><img src="public/images/tool_icons/Stripe.svg" alt="" /></span>
+                  <span>Stripe</span>
+                </li>
+                <li class="tf-tool-carousel-item">
+                  <span class="tf-tool-carousel-mark"><img src="public/images/tool_icons/Supabase.svg" alt="" /></span>
+                  <span>Supabase</span>
+                </li>
+                <li class="tf-tool-carousel-item">
+                  <span class="tf-tool-carousel-mark tf-tool-carousel-mark--crop"><img src="public/images/tool_icons/vercel.svg" alt="" /></span>
+                  <span>Vercel</span>
+                </li>
+                <li class="tf-tool-carousel-item">
+                  <span class="tf-tool-carousel-mark"><img src="public/images/tool_icons/Visual_Studio_Code.svg" alt="" /></span>
+                  <span>Visual Studio Code</span>
+                </li>
+              </ul>
+              </div>
+            </div>
           </div>
 
           <div class="tf-capability-groups">
@@ -760,27 +992,50 @@
       <section id="ai-work" class="work">
         <div class="container">
           <div class="section-head">
-            <div class="kicker">Applied AI work</div>
-            <h2>Working products and product experiments.</h2>
+            <div class="kicker">Current builds</div>
+            <h2>Applied AI work.</h2>
             <p class="tf-module-intro">
-              Current builds that connect interface decisions to models, APIs,
-              structured data, and deployment.
+              Products and experiments connecting interface decisions to
+              models, APIs, structured data, and deployment.
             </p>
           </div>
 
+          <div class="ai-build-activity">
+            <article
+              class="ai-experiment-card build-activity"
+              aria-labelledby="build-activity-title"
+            >
+              <div>
+                <h3 id="build-activity-title">GitHub Activity</h3>
+              </div>
+
+              <a
+                class="github-activity-card"
+                href="https://github.com/jayhilwig"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View Jay Hilwig on GitHub"
+              >
+                <img
+                  src="https://ghchart.rshah.org/c77b2a/jayhilwig"
+                  alt="GitHub contribution activity chart for Jay Hilwig"
+                  loading="lazy"
+                />
+              </a>
+            </article>
+          </div>
+
           <!-- tabum case study content -->
-          <div class="ai-work-block">
+          <div class="ai-work-block ai-work-featured">
             <div>
-              <p class="lead-text">
-                AI-assisted news aggregation and summarization.
-              </p>
+              <h3 class="lead-text">Tabum</h3>
               <p class="subcopy">
-                Built Tabum.org, a news platform that pulls from diverse
-                sources, generates concise summaries, and highlights patterns
-                across coverage.
+                AI-assisted news aggregation that pulls from diverse sources,
+                generates concise summaries, and highlights patterns across
+                coverage.
               </p>
 
-              <div class="project-table" style="margin-top: 32px">
+              <div class="project-table">
                 <article class="project-row">
                   <div>
                     <div class="project-title">Summarization workflows</div>
@@ -864,16 +1119,16 @@
           </div>
 
           <!-- Shape of AI flashcards -->
-          <div class="ai-work-block" style="margin-top: 96px">
+          <div class="ai-work-block ai-work-featured">
             <div>
-              <p class="lead-text">Shape of AI flashcards.</p>
+              <h3 class="lead-text">Shape of AI</h3>
               <p class="subcopy">
-                Integrating AI into UX: a pattern-based approach for designers
-                exploring how AI changes product behavior, interaction models,
-                and interface decision-making.
+                A pattern-based flashcard tool for designers exploring how AI
+                changes product behavior, interaction models, and interface
+                decisions.
               </p>
 
-              <div class="project-table" style="margin-top: 32px">
+              <div class="project-table">
                 <article class="project-row">
                   <div>
                     <div class="project-title">AI UX pattern system</div>
@@ -954,32 +1209,15 @@
             </div>
           </div>
 
-          <div class="ai-experiments">
-            <div class="ai-experiments-head">
-              <h3>Product experiments</h3>
+          <div
+            class="ai-work-collection"
+            aria-labelledby="additional-projects-title"
+          >
+            <div class="ai-work-collection-head">
+              <h3 id="additional-projects-title">Additional projects</h3>
             </div>
 
             <div class="ai-experiment-grid">
-              <article
-                class="ai-experiment-card build-activity"
-                aria-labelledby="build-activity-title"
-              >
-                <div>
-                  <div class="ai-experiment-status">Recent GitHub activity</div>
-                  <h4 id="build-activity-title">
-                    Still building and shipping on GitHub.
-                  </h4>
-                </div>
-
-                <div class="github-activity-card">
-                  <img
-                    src="https://ghchart.rshah.org/c77b2a/jayhilwig"
-                    alt="GitHub contribution activity chart for Jay Hilwig"
-                    loading="lazy"
-                  />
-                </div>
-              </article>
-
               <article class="ai-experiment-card">
                 <div>
                   <div class="ai-experiment-status">Workflow prototype</div>
@@ -1072,49 +1310,6 @@
                       data-lightbox="./public/images/hide-ai-chatbots-screenshot2.webp"
                       src="./public/images/hide-ai-chatbots-screenshot2.webp"
                       alt="Hide AI Chatbots browser extension screenshot"
-                      loading="lazy"
-                      style="display: block"
-                    />
-                  </button>
-                </div>
-              </article>
-
-              <article class="ai-experiment-card">
-                <div>
-                  <div class="ai-experiment-status">Mobile prototype</div>
-                  <h4>Dissolvr</h4>
-                  <p>
-                    A cross-platform iOS/Android messaging prototype using Expo
-                    and OpenAI to explore ephemeral communication, privacy
-                    controls, and a custom emoji-based language.
-                  </p>
-
-                  <div class="ai-experiment-tags">
-                    <span>VS Code</span>
-                    <span>Expo</span>
-                    <span>iOS / Android</span>
-                    <span>OpenAI</span>
-                    <span>Emoji language</span>
-                    <span>Privacy UX</span>
-                    <span>Messaging</span>
-                  </div>
-                </div>
-
-                <div class="ai-experiment-media">
-                  <button
-                    class="lightbox-trigger"
-                    type="button"
-                    style="
-                      border: none;
-                      background: none;
-                      padding: 0;
-                      cursor: pointer;
-                    "
-                  >
-                    <img
-                      data-lightbox="./public/images/dissolvr_photo.webp"
-                      src="./public/images/dissolvr_photo.webp"
-                      alt="Dissolvr mobile messaging prototype screenshot"
                       loading="lazy"
                       style="display: block"
                     />
@@ -1603,6 +1798,24 @@
         event.preventDefault();
         image.click();
       });
+
+      const toolCarousel = document.querySelector(".tf-tool-carousel");
+      if (toolCarousel) {
+        const viewport = toolCarousel.querySelector(".tf-tool-carousel-viewport");
+        const track = toolCarousel.querySelector(".tf-tool-carousel-track");
+        const motionTrack = toolCarousel.querySelector(".tf-tool-carousel-motion");
+        const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+        if (!reduceMotion.matches) {
+          const duplicateTrack = track.cloneNode(true);
+          duplicateTrack.setAttribute("aria-hidden", "true");
+          motionTrack.appendChild(duplicateTrack);
+
+          document.addEventListener("visibilitychange", () => {
+            motionTrack.classList.toggle("is-paused", document.hidden);
+          });
+        }
+      }
     </script>
   </body>
 </html>

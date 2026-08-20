@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Structured self-service input</title>
+  <desc id="desc">A simplified checklist form with selected fields and a submit control.</desc>
+  <rect x="24" y="12" width="80" height="104" rx="8" fill="#0c1719" stroke="#6fd4e0" stroke-width="4"/>
+  <path d="M42 34h44" fill="none" stroke="#d5ede5" stroke-linecap="round" stroke-width="5"/>
+  <rect x="39" y="50" width="12" height="12" rx="2" fill="none" stroke="#aab7b3" stroke-width="3"/>
+  <path d="m41.5 55.5 3 3 5-6" fill="none" stroke="#c6ff5f" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M60 56h27" fill="none" stroke="#d5ede5" stroke-linecap="round" stroke-width="4"/>
+  <rect x="39" y="72" width="12" height="12" rx="2" fill="none" stroke="#aab7b3" stroke-width="3"/>
+  <path d="M60 78h21" fill="none" stroke="#d5ede5" stroke-linecap="round" stroke-width="4"/>
+  <rect x="39" y="94" width="48" height="10" rx="3" fill="#172513" stroke="#c6ff5f" stroke-width="2"/>
+</svg>

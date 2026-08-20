@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Amazon Buyer Risk Prevention — Product Design Case Study | Jay Hilwig</title>
+    <meta
+      name="description"
+      content="A product design case study connecting customer account recovery, investigator decision support, structured data, and human judgment within Amazon Buyer Risk Prevention."
+    />
+    <link
+      rel="canonical"
+      href="https://jhilwig.com/amazon-buyer-risk-prevention.html"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <meta
+      property="og:title"
+      content="Amazon Buyer Risk Prevention — Product Design Case Study"
+    />
+    <meta
+      property="og:description"
+      content="Designing recovery across customer and risk systems while balancing protection, trust, automation, and human judgment."
+    />
+    <meta
+      property="og:url"
+      content="https://jhilwig.com/amazon-buyer-risk-prevention.html"
+    />
+    <meta property="og:type" content="article" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Amazon Buyer Risk Prevention — Product Design Case Study"
+    />
+    <meta
+      name="twitter:description"
+      content="A connected customer-recovery and investigator-workflow case study from Amazon Buyer Risk Prevention."
+    />
+
+    <link
+      rel="preload"
+      href="fonts/FTRegolaNeue-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/FTRegolaNeue-Semibold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/inter-tight-latin-ext-400-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CreativeWork",
+        "name": "Amazon Buyer Risk Prevention Product Design Case Study",
+        "author": {
+          "@type": "Person",
+          "name": "Jay Hilwig"
+        },
+        "about": [
+          "Product Design",
+          "Trust and Safety",
+          "Customer Recovery",
+          "Decision Support",
+          "User Research",
+          "Human-Centered Automation"
+        ],
+        "description": "A case study connecting customer account recovery, investigator decision support, structured data, and human judgment within Amazon Buyer Risk Prevention.",
+        "url": "https://jhilwig.com/amazon-buyer-risk-prevention.html"
+      }
+    </script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="brp.css" />
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "vd7sgk4tno");
+    </script>
+  </head>
+
+  <body class="case-brp">
+    <a class="brp-skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="brp-header">
+      <div class="container brp-nav">
+        <a class="brp-brand" href="index.html#work">jay hilwig</a>
+        <nav class="brp-nav-links" aria-label="Portfolio links">
+          <a href="index.html#work">Portfolio</a>
+          <a
+            href="https://jhilwig.com/JayHilwig.pdf"
+            target="_blank"
+            rel="noopener"
+            >Resume</a
+          >
+          <a
+            href="https://www.linkedin.com/in/jayhilwig/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="brp-hero">
+        <div class="container">
+          <div class="brp-hero-copy">
+            <div class="brp-eyebrow">Amazon / Buyer Risk Prevention</div>
+            <h1>Designing recovery across customer and risk systems.</h1>
+            <p>
+              I connected customer self-service with the investigator workflows
+              behind it—helping legitimate customers recover without weakening
+              the systems designed to stop bad actors.
+            </p>
+          </div>
+
+          <div class="brp-system-map brp-system-map--placeholder" aria-labelledby="brp-system-map-title">
+            <div class="brp-map-label" id="brp-system-map-title">
+              Graphic placeholder
+            </div>
+            <div
+              class="brp-graphic-placeholder"
+              role="img"
+              aria-label="Placeholder for future Buyer Risk Prevention case study graphics"
+            >
+              <span>BRP case study graphic</span>
+              <p>Placeholder for replacement project visuals.</p>
+            </div>
+          </div>
+
+          <div class="brp-hero-meta" aria-label="Project role and scope">
+            <div>
+              <span>Role</span>
+              <strong>Primary UX designer + research owner</strong>
+            </div>
+            <div>
+              <span>Scope</span>
+              <strong>Customer recovery + investigator workflows</strong>
+            </div>
+            <div>
+              <span>Partners</span>
+              <strong>Product, engineering, operations, service, data</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="brp-section brp-scope" id="scope">
+        <div class="container">
+          <div class="brp-section-heading brp-section-heading--narrow">
+            <div class="brp-eyebrow">Scope</div>
+            <h2>One risk system. Two human experiences.</h2>
+          </div>
+
+          <div class="brp-scope-bridge" aria-label="Customer recovery and risk operations connected through shared decision context">
+            <div>
+              <span>Customer recovery</span>
+              <strong>Regain trust and access</strong>
+            </div>
+            <div class="brp-bridge-line" aria-hidden="true">
+              <i></i><span>Shared decision context</span><i></i>
+            </div>
+            <div>
+              <span>Risk operations</span>
+              <strong>Reach a consistent decision</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="brp-section brp-research" id="research">
+        <div class="container">
+          <div class="brp-section-heading">
+            <div class="brp-eyebrow">Research + product artifacts</div>
+            <h2>Trust for customers. Judgment for investigators.</h2>
+          </div>
+
+          <div class="brp-artifact-story">
+            <article class="brp-artifact-panel brp-artifact-panel--customer">
+              <div class="brp-artifact-copy">
+                <div class="brp-index">01 / Customer recovery</div>
+                <h3>Trust had to come before verification.</h3>
+                <p>Explain the request, reduce uncertainty, and make the next step visible.</p>
+              </div>
+
+              <figure class="brp-customer-composition">
+                <div class="brp-browser-frame">
+                  <div class="brp-browser-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+                  <img
+                    src="/public/images/brp/customer-recovery-details.png"
+                    alt="Amazon customer recovery prototype explaining checks to complete before reporting unauthorized activity"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="brp-phone-frame">
+                  <img
+                    src="/public/images/brp/customer-recovery-checklist.png"
+                    alt="Mobile Amazon recovery checklist with three verification steps and a continue action"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption>Actual CSSW recovery prototypes</figcaption>
+              </figure>
+            </article>
+
+            <article class="brp-artifact-panel brp-artifact-panel--investigator">
+              <div class="brp-artifact-copy">
+                <div class="brp-index">02 / Guided Workflows</div>
+                <h3>Consistency could not come at the expense of judgment.</h3>
+                <p>Turn procedures into answerable questions, while keeping uncertainty visible.</p>
+              </div>
+
+              <figure class="brp-investigator-recreation">
+                <div class="brp-workflow-header">
+                  <span>Guided review</span>
+                  <strong>Evidence + decision context</strong>
+                </div>
+                <div class="brp-workflow-progress" aria-hidden="true"><i></i></div>
+                <div class="brp-workflow-body">
+                  <div class="brp-workflow-step brp-workflow-step--complete">
+                    <span>01</span><strong>Review available context</strong><em>Recorded</em>
+                  </div>
+                  <div class="brp-workflow-step brp-workflow-step--active">
+                    <span>02</span><strong>Compare relevant evidence</strong><em>In progress</em>
+                  </div>
+                  <div class="brp-workflow-question">
+                    <p>Does the available evidence support a clear decision?</p>
+                    <div><span>Yes</span><span>No</span><span>Needs review</span></div>
+                  </div>
+                  <div class="brp-workflow-step">
+                    <span>03</span><strong>Record decision context</strong><em>Next</em>
+                  </div>
+                </div>
+                <figcaption>Portfolio-safe recreation based on Guided Workflows artifacts</figcaption>
+              </figure>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="brp-section brp-decisions" id="decisions">
+        <div class="container">
+          <div class="brp-section-heading brp-section-heading--narrow">
+            <div class="brp-eyebrow">Key decisions</div>
+            <h2>Design the decision, not just the screen.</h2>
+          </div>
+
+          <div class="brp-decision-list">
+            <article class="brp-decision">
+              <div class="brp-decision-number">01</div>
+              <div>
+                <h3>Structure recovery.</h3>
+                <p>Replace free-form appeals with clear, reusable input.</p>
+              </div>
+              <div class="brp-decision-effect">Clarity → context</div>
+            </article>
+
+            <article class="brp-decision">
+              <div class="brp-decision-number">02</div>
+              <div>
+                <h3>Build trust first.</h3>
+                <p>Explain why information is needed before asking for it.</p>
+              </div>
+              <div class="brp-decision-effect">Trust → participation</div>
+            </article>
+
+            <article class="brp-decision">
+              <div class="brp-decision-number">03</div>
+              <div>
+                <h3>Guide without removing judgment.</h3>
+                <p>Make the path consistent while leaving room for expertise.</p>
+              </div>
+              <div class="brp-decision-effect">Consistency ≠ rigidity</div>
+            </article>
+
+            <article class="brp-decision brp-decision--highlight">
+              <div class="brp-decision-number">04</div>
+              <div>
+                <h3>Give automation an exit ramp.</h3>
+                <p>Route inconclusive evidence to a person, not a false conclusion.</p>
+              </div>
+              <div class="brp-decision-effect">Uncertainty → human review</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="brp-section brp-boundary" id="automation">
+        <div class="container">
+          <div class="brp-section-heading brp-section-heading--narrow">
+            <div class="brp-eyebrow">Human + automation boundary</div>
+            <h2>Automation when confidence is high. Human judgment when it isn’t.</h2>
+          </div>
+
+          <div class="brp-boundary-layout">
+            <div class="brp-confidence-diagram" role="img" aria-label="Decision flow from automated signal through evidence assessment to automated resolution or human review, followed by a recorded decision and structured feedback">
+              <div class="brp-flow-node brp-flow-node--source">
+                <span>01</span>
+                <strong>Automated signal</strong>
+              </div>
+              <div class="brp-flow-connector" aria-hidden="true"></div>
+              <div class="brp-flow-node brp-flow-node--evidence">
+                <span>02</span>
+                <strong>Confidence + evidence</strong>
+              </div>
+              <div class="brp-flow-fork" aria-hidden="true"></div>
+              <div class="brp-flow-branches">
+                <div class="brp-flow-node">
+                  <span>High confidence</span>
+                  <strong>Resolve</strong>
+                </div>
+                <div class="brp-flow-node brp-flow-node--human">
+                  <span>Unclear evidence</span>
+                  <strong>Human review</strong>
+                </div>
+              </div>
+              <div class="brp-flow-merge" aria-hidden="true"></div>
+              <div class="brp-flow-node brp-flow-node--decision">
+                <span>03</span>
+                <strong>Decision + structured feedback</strong>
+              </div>
+            </div>
+
+            <div class="brp-boundary-copy">
+              <p class="brp-lead">Automate the clear cases. Make the uncertain ones easier for a person to evaluate.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="brp-section brp-outcomes" id="evidence">
+        <div class="container">
+          <div class="brp-section-heading">
+            <div class="brp-eyebrow">Evidence + outcomes</div>
+            <h2>Faster to learn. Faster to recover.</h2>
+          </div>
+
+          <div class="brp-evidence-row">
+            <div>
+              <span>Prototype research / first task</span>
+              <strong>9:34</strong>
+            </div>
+            <div class="brp-evidence-arrow" aria-hidden="true">→</div>
+            <div>
+              <span>Prototype research / third task</span>
+              <strong>5:23</strong>
+            </div>
+            <div class="brp-research-change">
+              <strong>43%</strong>
+              <span>within-session improvement</span>
+            </div>
+          </div>
+
+          <div class="brp-outcome-grid">
+            <div>
+              <span>Account-resolution time</span>
+              <strong>2–3 days <small>→</small> ~5 min.</strong>
+            </div>
+            <div>
+              <span>False positives</span>
+              <strong>−2%</strong>
+            </div>
+            <div>
+              <span>False negatives</span>
+              <strong>−5%</strong>
+            </div>
+          </div>
+
+          <div class="brp-closing">
+            <p>
+              The opportunity was larger than a recovery form or investigator tool: connect customer trust with accurate, explainable decisions.
+            </p>
+            <a class="brp-back-link" href="index.html#work">
+              <span aria-hidden="true">↗</span>
+              Back to work
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="brp-footer">
+      <div class="container">
+        <span>Jay Hilwig © 2026</span>
+        <span>Product design for complex systems</span>
+      </div>
+    </footer>
+  </body>
+</html>

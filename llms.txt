@@ -11,6 +11,6 @@
 ## Key sections
 
 - Work: Amazon Transparency, Aloft Appraisal, IDEO Method Cards
-- AI & Experiments: Tabum, Shape of AI, Docuformer, Dissolvr, Applia, Search for GPT
+- Applied AI work: Tabum, Shape of AI, DocuFormer, Hide AI Chatbots, Applia, Search for Codex, Search for ChatGPT
 - Technical: tools, systems, platforms, AI prototyping, frontend, data, hosting, design systems, mobile
 - CV: career, education, patents
