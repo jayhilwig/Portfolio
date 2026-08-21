@@ -898,6 +898,7 @@ h2 {
 }
 .case-study-placeholder--brp .case-study-placeholder-mark {
   background: #071011;
+  box-shadow: inset 0 0 0 2px #ffffff;
 }
 .case-study-placeholder--brp .case-study-placeholder-mark svg {
   width: 100%;
