@@ -1020,17 +1020,23 @@ h2 {
 }
 .tool-logo img {
   max-width: 100%;
-  max-height: 34px;
+  width: auto;
+  height: 28px;
+  max-height: 28px;
   object-fit: contain;
   opacity: 0.9;
 }
 .tool-logo--openweather img {
+  height: 46px;
   max-height: 46px;
 }
 .tool-logo--figma img {
-  max-height: 52px;
+  height: 28px;
+  max-height: 28px;
   max-width: 150px;
-  transform: scale(1.25);
+}
+.tool-logo-grid--codex-usage .tool-logo {
+  min-height: 132px;
 }
 .ai-work-block {
   display: grid;
@@ -2068,6 +2074,9 @@ main,
     .tool-logo img,
     .tool-logo svg {
       max-height: 28px !important;
+    }
+    .tool-logo-grid--codex-usage .tool-logo {
+      min-height: 88px !important;
     }
     .case-study-link {
       align-items: flex-start;
