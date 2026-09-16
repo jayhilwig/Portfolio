@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Paintings — Jay Hilwig</title>
+  <meta
+    name="description"
+    content="Mixed-media paintings by Jay Hilwig exploring abstraction, figuration, personal narratives, found objects, movement, and tension."
+  />
+  <link rel="canonical" href="https://jhilwig.com/paintings" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Paintings — Jay Hilwig" />
+  <meta
+    property="og:description"
+    content="Mixed-media paintings by Jay Hilwig exploring abstraction, figuration, personal narratives, found objects, movement, and tension."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jhilwig.com/paintings" />
+
+  <link rel="icon" href="favicon.ico" sizes="any" />
+
+  <style>
+    @font-face {
+      font-family: "FT Regola Neue";
+      src: url("fonts/FTRegolaNeue-Regular.woff2") format("woff2");
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "FT Regola Neue";
+      src: url("fonts/FTRegolaNeue-Semibold.woff2") format("woff2");
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Inter Tight";
+      src: url("fonts/inter-tight-latin-ext-400-normal.woff2") format("woff2");
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --link: #187fa3;
+      --accent: #a26720;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    body {
+      font-family: "Inter Tight", system-ui, sans-serif;
+      font-size: 14px;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .container {
+      width: min(calc(100% - 48px), var(--max));
+      margin: 0 auto;
+    }
+
+    /* Same header treatment as the main portfolio. */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: saturate(180%) blur(18px);
+      -webkit-backdrop-filter: saturate(180%) blur(18px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+    }
+
+    .home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--text);
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    .back-mark {
+      width: 52px;
+      height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+      background: var(--accent);
+      border: 4px solid transparent;
+      transition: border-color 0.45s ease;
+      flex: 0 0 auto;
+    }
+
+    .back-mark svg {
+      width: 28px;
+      height: 28px;
+      display: block;
+    }
+
+    .brand {
+      font-family: "FT Regola Neue", "Inter Tight", sans-serif;
+      letter-spacing: -0.015em;
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .home-link:hover .brand {
+      text-decoration-line: underline;
+      text-decoration-thickness: 0.085em;
+      text-underline-offset: 0.13em;
+    }
+
+    .home-link:hover .back-mark {
+      border-color: var(--link);
+    }
+
+    .home-link:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 5px;
+      border-radius: 3px;
+    }
+
+    main {
+      background: #fff;
+    }
+
+    .paintings {
+      width: min(calc(100% - 48px), var(--max));
+      margin: 0 auto;
+      padding: 56px 0 72px;
+      display: grid;
+      gap: 56px;
+      background: #fff;
+    }
+
+    .painting {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+    }
+
+    .painting img {
+      display: block;
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      background: #fff;
+    }
+
+    @media (max-width: 640px) {
+      .container,
+      .paintings {
+        width: min(calc(100% - 32px), var(--max));
+      }
+
+      .nav {
+        min-height: 68px;
+      }
+
+      .home-link {
+        gap: 11px;
+      }
+
+      .back-mark {
+        width: 44px;
+        height: 44px;
+        border-width: 3px;
+      }
+
+      .back-mark svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .brand {
+        font-size: clamp(1.9rem, 9vw, 2.25rem);
+      }
+
+      .paintings {
+        padding: 32px 0 48px;
+        gap: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="home-link" href="/" aria-label="Back to Jay Hilwig portfolio">
+        <span class="back-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" focusable="false">
+            <g transform="rotate(225 16 16)">
+              <path
+                d="M8 7H25V24H19.6V16.2L10.8 25L7 21.2L15.8 12.4H8V7Z"
+                fill="white"
+              />
+            </g>
+          </svg>
+        </span>
+        <span class="brand">jay hilwig</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="paintings" aria-label="Painting gallery">
+      <figure class="painting">
+        <img
+          src="/public/images/c4.webp"
+          srcset="
+            /public/images/c4-p-500.webp 500w,
+            /public/images/c4-p-800.webp 800w,
+            /public/images/c4.webp 923w
+          "
+          sizes="(max-width: 955px) calc(100vw - 32px), 923px"
+          alt="Mixed-media painting by Jay Hilwig"
+        />
+      </figure>
+
+      <figure class="painting">
+        <img
+          src="/public/images/b2.webp"
+          srcset="
+            /public/images/b2-p-500.webp 500w,
+            /public/images/b2-p-800.webp 800w,
+            /public/images/b2.webp 923w
+          "
+          sizes="(max-width: 955px) calc(100vw - 32px), 923px"
+          alt="Mixed-media painting by Jay Hilwig"
+          loading="lazy"
+        />
+      </figure>
+
+      <figure class="painting">
+        <img
+          src="/public/images/d2.webp"
+          srcset="
+            /public/images/d2-p-500.webp 500w,
+            /public/images/d2-p-800.webp 800w,
+            /public/images/d2.webp 925w
+          "
+          sizes="(max-width: 957px) calc(100vw - 32px), 925px"
+          alt="Mixed-media painting by Jay Hilwig"
+          loading="lazy"
+        />
+      </figure>
+
+      <figure class="painting">
+        <img
+          src="/public/images/a5.webp"
+          srcset="
+            /public/images/a5-p-500.webp 500w,
+            /public/images/a5-p-800.webp 800w,
+            /public/images/a5-p-1080.webp 1080w,
+            /public/images/a5-p-1600.webp 1600w,
+            /public/images/a5.webp 1800w
+          "
+          sizes="(max-width: 1212px) calc(100vw - 32px), 1180px"
+          alt="Mixed-media painting by Jay Hilwig"
+          loading="lazy"
+        />
+      </figure>
+
+      <figure class="painting">
+        <img
+          src="/public/images/e2-1.webp"
+          srcset="
+            /public/images/e2-1-p-500.webp 500w,
+            /public/images/e2-1-p-800.webp 800w,
+            /public/images/e2-1-p-1080.webp 1080w,
+            /public/images/e2-1-p-1600.webp 1600w,
+            /public/images/e2-1.webp 1800w
+          "
+          sizes="(max-width: 1212px) calc(100vw - 32px), 1180px"
+          alt="Mixed-media painting by Jay Hilwig"
+          loading="lazy"
+        />
+      </figure>
+    </section>
+  </main>
+</body>
+</html>
