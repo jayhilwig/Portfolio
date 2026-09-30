@@ -9,28 +9,28 @@
 /* Amazon Ember fonts */
 @font-face {
   font-family: "Amazon Ember";
-  src: url("fonts/AmazonEmber_Rg.woff2") format("woff2");
+  src: url("/fonts/AmazonEmber_Rg.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: "Amazon Ember";
-  src: url("fonts/Amazon-Ember-Medium.woff2") format("woff2");
+  src: url("/fonts/Amazon-Ember-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: "Amazon Ember";
-  src: url("fonts/AmazonEmber_Bd.woff2") format("woff2");
+  src: url("/fonts/AmazonEmber_Bd.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: block;
 }
 @font-face {
   font-family: "Amazon Ember";
-  src: url("fonts/AmazonEmber_He.woff2") format("woff2");
+  src: url("/fonts/AmazonEmber_He.woff2") format("woff2");
   font-weight: 800;
   font-style: normal;
   font-display: block;

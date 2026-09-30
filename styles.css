@@ -1,31 +1,31 @@
 /* Custom fonts */
 @font-face {
   font-family: "FT Regola Neue";
-  src: url("fonts/FTRegolaNeue-Regular.woff2") format("woff2");
+  src: url("/fonts/FTRegolaNeue-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: "FT Regola Neue";
-  src: url("fonts/FTRegolaNeue-Medium.woff2") format("woff2");
+  src: url("/fonts/FTRegolaNeue-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: "FT Regola Neue";
-  src: url("fonts/FTRegolaNeue-Semibold.woff2") format("woff2");
+  src: url("/fonts/FTRegolaNeue-Semibold.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: "FT Regola Neue";
-  src: url("fonts/FTRegolaNeue-RegularItalic.woff2") format("woff2");
+  src: url("/fonts/FTRegolaNeue-RegularItalic.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: "Caveat";
@@ -36,10 +36,10 @@
 }
 @font-face {
   font-family: "Inter Tight";
-  src: url("fonts/inter-tight-latin-ext-400-normal.woff2") format("woff2");
+  src: url("/fonts/inter-tight-latin-ext-400-normal.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 :root {
   --bg: #ffffff;

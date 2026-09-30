@@ -1378,66 +1378,24 @@
   line-height: 1.08;
 }
 
-.brp-customer-stage--identify .brp-device-shell {
+.brp-customer-mobile-shot {
+  width: min(100%, var(--brp-mobile-shot-max-width));
   justify-self: center;
-}
-
-.brp-device-shell {
-  position: relative;
   overflow: hidden;
-  width: min(100%, 430px);
-  padding: 26px 10px 10px;
-  border: 2px solid #334042;
-  border-radius: 46px;
-  background: #050809;
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.38);
-}
-
-.brp-device-speaker {
-  position: absolute;
-  top: 11px;
-  left: 50%;
-  width: 58px;
-  height: 5px;
-  border-radius: 999px;
-  background: #4b5455;
-  transform: translateX(-50%);
-}
-
-.brp-device-screen {
-  overflow: hidden;
-  border-radius: 34px;
+  border: 1px solid var(--brp-lime);
   background: #fff;
 }
 
-.brp-device-screen img {
-  display: block;
-  width: 100%;
-  height: auto;
+.brp-customer-mobile-shot--first {
+  --brp-mobile-shot-max-width: 442px;
 }
 
-.brp-review-devices {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 430px));
-  gap: var(--brp-space-5);
-  justify-content: center;
-  align-items: start;
+.brp-customer-mobile-shot--review {
+  --brp-mobile-shot-max-width: 431px;
+  padding-bottom: 12px;
 }
 
-.brp-screenshot-card {
-  overflow: hidden;
-  padding: 10px;
-  border: 1px solid var(--brp-line-strong);
-  background: #dfe5e8;
-  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.3);
-}
-
-.brp-screenshot-card--single {
-  width: min(100%, 520px);
-  justify-self: center;
-}
-
-.brp-screenshot-card img {
+.brp-customer-mobile-shot img {
   display: block;
   width: 100%;
   height: auto;
@@ -1450,14 +1408,8 @@
   align-items: start;
 }
 
-.brp-screenshot-card--paired {
-  height: clamp(620px, 54vw, 760px);
-}
-
-.brp-screenshot-card--paired img {
-  height: 100%;
-  object-fit: cover;
-  object-position: top;
+.brp-review-screens--single {
+  grid-template-columns: 1fr;
 }
 
 .brp-editorial-artifact,
@@ -1796,11 +1748,6 @@
     gap: var(--brp-space-6);
   }
 
-  .brp-review-devices,
-  .brp-review-screens {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .brp-investigator-detail {
     grid-template-columns: 1fr;
     gap: var(--brp-space-4);
@@ -2008,8 +1955,6 @@
 
   .brp-product-pair,
   .brp-customer-stage,
-  .brp-review-devices,
-  .brp-review-screens,
   .brp-prototype-evidence {
     grid-template-columns: 1fr;
   }
@@ -2031,33 +1976,8 @@
     max-width: 18ch;
   }
 
-  .brp-device-shell,
-  .brp-customer-stage--identify .brp-device-shell {
-    width: min(100%, 390px);
-    justify-self: center;
-    border-radius: 38px;
-  }
-
-  .brp-device-screen {
-    border-radius: 27px;
-  }
-
-  .brp-review-devices,
   .brp-review-screens {
     gap: var(--brp-space-6);
-  }
-
-  .brp-screenshot-card--single {
-    width: min(100%, 430px);
-  }
-
-  .brp-screenshot-card--paired {
-    height: auto;
-  }
-
-  .brp-screenshot-card--paired img {
-    height: auto;
-    object-fit: contain;
   }
 
   .brp-editorial-artifact,
