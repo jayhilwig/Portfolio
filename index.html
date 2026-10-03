@@ -966,7 +966,7 @@
           </div>
 
           <!-- tabum case study content -->
-          <div class="ai-work-block ai-work-featured">
+          <div class="ai-work-block ai-work-featured ai-work-featured--tabum">
             <div>
               <h3 class="lead-text">Tabum</h3>
               <p class="subcopy">
@@ -1033,9 +1033,9 @@
           </div>
 
           <!-- Eat Safely -->
-          <div class="ai-work-block ai-work-featured">
+          <div class="ai-work-block ai-work-featured ai-work-featured--eat-safely">
             <div>
-              <h3 class="lead-text">Eat Safely</h3>
+              <h3 class="lead-text ambient-eat-heading">Eat Safely</h3>
               <p class="subcopy">
                 A public food-safety tracker that combines federal recall and
                 outbreak data into a simple answer: what should I avoid buying
@@ -1091,7 +1091,7 @@
           </div>
 
           <!-- White House War -->
-          <div class="ai-work-block ai-work-featured">
+          <div class="ai-work-block ai-work-featured ai-work-featured--white-house-war">
             <div>
               <h3 class="lead-text">White House War</h3>
               <p class="subcopy">
@@ -1101,21 +1101,21 @@
               </p>
 
               <div class="project-table">
-                <article class="project-row">
+                <article class="project-row ambient-territory-rule">
                   <div>
                     <div class="project-title">Interactive game system</div>
                     <div class="project-desc">Next.js + React</div>
                   </div>
                 </article>
 
-                <article class="project-row">
+                <article class="project-row ambient-territory-rule">
                   <div>
                     <div class="project-title">Persistent ownership + realtime</div>
                     <div class="project-desc">Supabase + Postgres</div>
                   </div>
                 </article>
 
-                <article class="project-row">
+                <article class="project-row ambient-territory-rule">
                   <div>
                     <div class="project-title">Checkout + fulfillment</div>
                     <div class="project-desc">Stripe webhooks</div>
@@ -1149,9 +1149,9 @@
           </div>
 
           <!-- Codex Usage -->
-          <div class="ai-work-block ai-work-featured">
+          <div class="ai-work-block ai-work-featured ai-work-featured--codex-usage">
             <div>
-              <h3 class="lead-text">Codex Usage</h3>
+              <h3 class="lead-text ambient-codex-heading">Codex Usage</h3>
               <p class="subcopy">
                 A cross-platform desktop plugin for tracking Codex usage and
                 reset limits, published in the official OpenAI Plugins
@@ -1159,7 +1159,7 @@
               </p>
 
               <div class="project-table">
-                <article class="project-row">
+                <article class="project-row ambient-codex-meter-row">
                   <div>
                     <div class="project-title">Usage visibility</div>
                     <div class="project-desc">Daily + weekly limits</div>
@@ -1207,9 +1207,9 @@
           </div>
 
           <!-- Shape of AI flashcards -->
-          <div class="ai-work-block ai-work-featured">
+          <div class="ai-work-block ai-work-featured ai-work-featured--shape-ai">
             <div>
-              <h3 class="lead-text">Shape of AI</h3>
+              <h3 class="lead-text ambient-shape-heading">Shape of AI</h3>
               <p class="subcopy">
                 A pattern-based flashcard tool for designers exploring how AI
                 changes product behavior, interaction models, and interface
@@ -1871,6 +1871,344 @@
           });
         }
       }
+
+      // Ambient animation experiment: viewport-triggered, one-shot events.
+      const ambientReduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      );
+      const ambientPhone = window.matchMedia("(max-width: 640px)");
+      const ambientTabumTable = document.querySelector(
+        ".ai-work-featured--tabum .project-table",
+      );
+      const ambientEatTable = document.querySelector(
+        ".ai-work-featured--eat-safely .project-table",
+      );
+      const ambientWhiteHouseTable = document.querySelector(
+        ".ai-work-featured--white-house-war .project-table",
+      );
+      const ambientCodexTable = document.querySelector(
+        ".ai-work-featured--codex-usage .project-table",
+      );
+      const ambientCodexHeading = document.querySelector(
+        ".ambient-codex-heading",
+      );
+      const ambientShapeTable = document.querySelector(
+        ".ai-work-featured--shape-ai .project-table",
+      );
+      let ambientFoodSlots;
+      const ambientCompleted = new Set();
+      const ambientPending = new Map();
+      let ambientObserver;
+      let ambientScrollTimer;
+      let ambientActive = false;
+      let ambientScrolling = false;
+
+      const ambientIsEligible = (element) => {
+        if (
+          !element ||
+          ambientReduceMotion.matches ||
+          ambientPhone.matches ||
+          document.hidden ||
+          ambientScrolling ||
+          element.matches(":hover, :focus, :focus-within") ||
+          element.contains(document.activeElement)
+        ) {
+          return false;
+        }
+
+        const bounds = element.getBoundingClientRect();
+        const visibleTop = Math.max(bounds.top, 0);
+        const visibleBottom = Math.min(bounds.bottom, window.innerHeight);
+        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
+        return (
+          bounds.width > 0 &&
+          bounds.height > 0 &&
+          bounds.right > 0 &&
+          bounds.left < window.innerWidth &&
+          visibleHeight / bounds.height >= 0.6
+        );
+      };
+
+      const ambientCreateFoodSlots = (finish) => {
+        const heading = document.querySelector(".ambient-eat-heading");
+        if (!heading) {
+          finish();
+          return;
+        }
+        const foods = ["🍎", "🥬", "🍕", "🥚", "🍓", "🧀", "🥩", "🥕"];
+        const finalFoods = ["🍎", "🥬", "🍓"];
+        const slots = document.createElement("span");
+        slots.className = "ambient-food-slots";
+        slots.setAttribute("aria-hidden", "true");
+        const cells = finalFoods.map(() => {
+          const cell = document.createElement("span");
+          cell.className = "ambient-food-slot";
+          slots.appendChild(cell);
+          return cell;
+        });
+        heading.appendChild(slots);
+        ambientFoodSlots = slots;
+
+        let frame = 0;
+        const cycle = window.setInterval(() => {
+          cells.forEach((cell, index) => {
+            cell.textContent = foods[(frame + index * 2) % foods.length];
+          });
+          frame += 1;
+          if (frame >= 8) {
+            window.clearInterval(cycle);
+            cells.forEach((cell, index) => {
+              cell.textContent = finalFoods[index];
+            });
+            window.setTimeout(() => {
+              slots.classList.add("is-fading");
+              window.setTimeout(() => {
+                slots.remove();
+                ambientFoodSlots = null;
+                finish();
+              }, 350);
+            }, 450);
+          }
+        }, 120);
+      };
+
+      const ambientEffects = [
+        {
+          id: "tabum-pipeline",
+          target: ambientTabumTable,
+          delay: 900,
+          run: (finish) => {
+            const tabumBlock = ambientTabumTable.closest(
+              ".ai-work-featured--tabum",
+            );
+            tabumBlock.classList.add("ambient-pipeline-active");
+            window.setTimeout(() => {
+              tabumBlock.classList.remove("ambient-pipeline-active");
+              finish();
+            }, 1800);
+          },
+        },
+        {
+          id: "eat-safely-slots",
+          target: ambientEatTable,
+          delay: 850,
+          run: ambientCreateFoodSlots,
+        },
+        {
+          id: "white-house-territory",
+          target: ambientWhiteHouseTable,
+          delay: 900,
+          run: (finish) => {
+            const block = ambientWhiteHouseTable.closest(
+              ".ai-work-featured--white-house-war",
+            );
+            const rules = [
+              ...block.querySelectorAll(".ambient-territory-rule"),
+            ];
+            if (!rules.length) {
+              finish();
+              return;
+            }
+            const pulses = rules.map((rule) => {
+              const pulse = document.createElement("span");
+              pulse.className = "ambient-territory-pulse";
+              pulse.setAttribute("aria-hidden", "true");
+              rule.appendChild(pulse);
+              return pulse;
+            });
+            block.classList.add("ambient-territory-active");
+            window.setTimeout(() => {
+              block.classList.remove("ambient-territory-active");
+              pulses.forEach((pulse) => pulse.remove());
+              finish();
+            }, 2200);
+          },
+        },
+        {
+          id: "codex-usage-meter",
+          target: ambientCodexTable,
+          delay: 900,
+          run: (finish) => {
+            if (!ambientCodexHeading) {
+              finish();
+              return;
+            }
+            const meter = document.createElement("span");
+            meter.className = "ambient-usage-meter";
+            meter.setAttribute("aria-hidden", "true");
+            meter.innerHTML =
+              '<span class="ambient-usage-track"><span class="ambient-usage-fill"></span></span><span class="ambient-usage-label">$$</span>';
+            ambientCodexHeading.appendChild(meter);
+            ambientCodexHeading.classList.add("ambient-codex-active");
+            window.setTimeout(() => {
+              ambientCodexHeading.classList.remove("ambient-codex-active");
+              meter.remove();
+              finish();
+            }, 1700);
+          },
+        },
+        {
+          id: "shape-ai-cards",
+          target: ambientShapeTable,
+          delay: 900,
+          run: (finish) => {
+            const heading = document.querySelector(".ambient-shape-heading");
+            if (!heading) {
+              finish();
+              return;
+            }
+            const fan = document.createElement("span");
+            fan.className = "ambient-card-fan";
+            fan.setAttribute("aria-hidden", "true");
+            [["A", "♠"], ["K", "♥"], ["Q", "♣"], ["J", "♦"]].forEach(
+              ([rank, suit]) => {
+                const card = document.createElement("span");
+                card.className = "ambient-pattern-card";
+                const back = document.createElement("span");
+                back.className = "ambient-card-back";
+                const face = document.createElement("span");
+                face.className = "ambient-card-face";
+                face.textContent = `${rank}${suit}`;
+                card.append(back, face);
+                fan.appendChild(card);
+              },
+            );
+            heading.appendChild(fan);
+            window.setTimeout(() => {
+              fan.remove();
+              finish();
+            }, 2500);
+          },
+        },
+      ].filter((effect) => effect.target);
+
+      const ambientArm = (effect) => {
+        if (
+          ambientReduceMotion.matches ||
+          ambientCompleted.has(effect.id) ||
+          ambientPending.has(effect.id)
+        ) {
+          return;
+        }
+
+        const timer = window.setTimeout(() => {
+          ambientPending.delete(effect.id);
+          if (ambientCompleted.has(effect.id) || !ambientIsEligible(effect.target)) {
+            return;
+          }
+          if (ambientActive) {
+            ambientArm(effect);
+            return;
+          }
+
+          ambientCompleted.add(effect.id);
+          ambientActive = true;
+          effect.run(() => {
+            ambientActive = false;
+          });
+        }, effect.delay);
+        ambientPending.set(effect.id, timer);
+      };
+
+      const ambientCancelPending = () => {
+        ambientPending.forEach((timer) => window.clearTimeout(timer));
+        ambientPending.clear();
+      };
+
+      const ambientObserve = () => {
+        if (
+          ambientReduceMotion.matches ||
+          ambientPhone.matches ||
+          !("IntersectionObserver" in window)
+        ) {
+          return;
+        }
+
+        ambientObserver = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              const effect = ambientEffects.find(
+                (candidate) => candidate.target === entry.target,
+              );
+              if (!effect) return;
+              if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+                ambientArm(effect);
+              } else {
+                const timer = ambientPending.get(effect.id);
+                if (timer) {
+                  window.clearTimeout(timer);
+                  ambientPending.delete(effect.id);
+                }
+              }
+            });
+          },
+          { threshold: [0, 0.6] },
+        );
+        ambientEffects.forEach((effect) => ambientObserver.observe(effect.target));
+      };
+
+      window.addEventListener(
+        "scroll",
+        () => {
+          ambientScrolling = true;
+          ambientCancelPending();
+          window.clearTimeout(ambientScrollTimer);
+          ambientScrollTimer = window.setTimeout(() => {
+            ambientScrolling = false;
+            ambientEffects.forEach((effect) => {
+              if (ambientIsEligible(effect.target)) ambientArm(effect);
+            });
+          }, 180);
+        },
+        { passive: true },
+      );
+      ambientReduceMotion.addEventListener?.("change", (event) => {
+        ambientCancelPending();
+        if (!event.matches) {
+          ambientObserve();
+          return;
+        }
+        ambientObserver?.disconnect();
+        ambientTabumTable
+          ?.closest(".ai-work-featured--tabum")
+          ?.classList.remove("ambient-pipeline-active");
+        document
+          .querySelector(".ai-work-featured--white-house-war")
+          ?.classList.remove("ambient-territory-active");
+        document
+          .querySelectorAll(".ambient-territory-pulse")
+          .forEach((pulse) => pulse.remove());
+        ambientCodexHeading?.classList.remove("ambient-codex-active");
+        document.querySelector(".ambient-usage-meter")?.remove();
+        document.querySelector(".ambient-card-fan")?.remove();
+        ambientFoodSlots?.remove();
+        ambientFoodSlots = null;
+        ambientActive = false;
+      });
+      ambientPhone.addEventListener?.("change", (event) => {
+        ambientCancelPending();
+        if (event.matches) {
+          ambientObserver?.disconnect();
+          ambientTabumTable
+            ?.closest(".ai-work-featured--tabum")
+            ?.classList.remove("ambient-pipeline-active");
+          document
+            .querySelector(".ai-work-featured--white-house-war")
+            ?.classList.remove("ambient-territory-active");
+          document
+            .querySelectorAll(".ambient-territory-pulse")
+            .forEach((pulse) => pulse.remove());
+          ambientCodexHeading?.classList.remove("ambient-codex-active");
+          document.querySelector(".ambient-usage-meter")?.remove();
+          document.querySelector(".ambient-card-fan")?.remove();
+          ambientFoodSlots?.remove();
+          ambientFoodSlots = null;
+          ambientActive = false;
+          return;
+        }
+        ambientObserve();
+      });
+      ambientObserve();
     </script>
   </body>
 </html>

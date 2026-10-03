@@ -956,6 +956,259 @@ h2 {
 .ai-work-featured .project-table {
   margin-top: 32px;
 }
+.ai-work-featured--tabum .project-row {
+  position: relative;
+}
+.ai-work-featured--tabum .project-row::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0;
+  pointer-events: none;
+}
+@keyframes ambient-pipeline-dot {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  14% {
+    opacity: 1;
+  }
+  82% {
+    opacity: 1;
+  }
+  100% {
+    left: calc(100% - 4px);
+    opacity: 0;
+  }
+}
+.ai-work-featured--tabum.ambient-pipeline-active .project-row::after {
+  animation: ambient-pipeline-dot 1.8s ease-in-out both;
+}
+.ai-work-featured--tabum.ambient-pipeline-active .project-row:nth-child(2)::after {
+  animation-delay: 0.42s;
+}
+.ai-work-featured--tabum.ambient-pipeline-active .project-row:nth-child(3)::after {
+  animation-delay: 0.84s;
+}
+.ambient-eat-heading {
+  position: relative;
+}
+.ambient-food-slots {
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 4px;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 2;
+}
+.ambient-food-slots.is-fading {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.ambient-food-slot {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-dark);
+  border-radius: 4px;
+  background: var(--white);
+  font-size: 1rem;
+  line-height: 1;
+}
+.ambient-territory-rule {
+  position: relative;
+}
+.ai-work-featured--white-house-war .ambient-territory-rule:nth-child(1) {
+  --territory-delay: 0s;
+}
+.ai-work-featured--white-house-war .ambient-territory-rule:nth-child(2) {
+  --territory-delay: 0.58s;
+}
+.ai-work-featured--white-house-war .ambient-territory-rule:nth-child(3) {
+  --territory-delay: 1.16s;
+}
+.ambient-territory-rule::before,
+.ambient-territory-rule::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+}
+.ambient-territory-rule::before {
+  left: 0;
+  background: #c74b4b;
+}
+.ambient-territory-rule::after {
+  right: 0;
+  background: #4e78c2;
+}
+@keyframes ambient-territory-red {
+  0% { left: 0; opacity: 0; }
+  18%, 82% { opacity: 1; }
+  100% { left: calc(50% - 3px); opacity: 0; }
+}
+@keyframes ambient-territory-blue {
+  0% { right: 0; opacity: 0; }
+  18%, 82% { opacity: 1; }
+  100% { right: calc(50% - 3px); opacity: 0; }
+}
+.ambient-territory-pulse {
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--muted);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 50%) scale(0.35);
+}
+.ambient-territory-active .ambient-territory-rule::before {
+  animation: ambient-territory-red 0.62s ease-in-out var(--territory-delay) both;
+}
+.ambient-territory-active .ambient-territory-rule::after {
+  animation: ambient-territory-blue 0.62s ease-in-out var(--territory-delay) both;
+}
+@keyframes ambient-territory-pulse {
+  0%, 45% { opacity: 0; transform: translate(-50%, 50%) scale(0.35); }
+  58% { opacity: 1; transform: translate(-50%, 50%) scale(0.75); }
+  100% { opacity: 0; transform: translate(-50%, 50%) scale(1.2); }
+}
+.ambient-territory-active .ambient-territory-rule .ambient-territory-pulse {
+  animation: ambient-territory-pulse 0.36s ease-out calc(var(--territory-delay) + 0.62s) both;
+}
+.ambient-codex-heading {
+  position: relative;
+}
+.ambient-usage-meter {
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  pointer-events: none;
+}
+.ambient-usage-track {
+  width: 92px;
+  height: 5px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.ambient-usage-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+}
+.ambient-usage-label {
+  color: var(--muted);
+  font-size: 0.72rem;
+  line-height: 1;
+}
+@keyframes ambient-usage-appearance {
+  0%, 100% { opacity: 0; }
+  15%, 82% { opacity: 1; }
+}
+@keyframes ambient-usage-fill {
+  0% { width: 0; }
+  65%, 82% { width: 76%; }
+  100% { width: 76%; }
+}
+.ambient-codex-heading.ambient-codex-active .ambient-usage-meter {
+  animation: ambient-usage-appearance 1.7s ease-in-out both;
+}
+.ambient-codex-heading.ambient-codex-active .ambient-usage-fill {
+  animation: ambient-usage-fill 1.7s ease-in-out both;
+}
+.ambient-shape-heading {
+  position: relative;
+}
+.ambient-card-fan {
+  position: absolute;
+  left: calc(100% + 10px);
+  top: 50%;
+  width: 150px;
+  height: 44px;
+  pointer-events: none;
+  z-index: 2;
+  perspective: 300px;
+  transform: translateY(-50%);
+}
+.ambient-pattern-card {
+  --card-x: 0px;
+  --card-rotation: 0deg;
+  --card-delay: 0s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 26px;
+  height: 36px;
+  transform-origin: 50% 85%;
+  transform-style: preserve-3d;
+  animation: ambient-card-fan 2.2s ease-in-out var(--card-delay) both;
+}
+.ambient-pattern-card > span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line-dark);
+  border-radius: 3px;
+  backface-visibility: hidden;
+  font-size: 9px;
+  line-height: 1;
+}
+.ambient-card-back {
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(24, 127, 163, 0.13) 0 2px,
+    transparent 2px 4px
+  );
+}
+.ambient-card-face {
+  background: var(--white);
+  color: var(--text);
+  transform: rotateY(180deg);
+}
+.ambient-pattern-card:nth-child(1) { --card-x: -40px; --card-rotation: -55deg; --card-delay: 0.12s; }
+.ambient-pattern-card:nth-child(2) { --card-x: -14px; --card-rotation: -20deg; --card-delay: 0.04s; }
+.ambient-pattern-card:nth-child(3) { --card-x: 14px; --card-rotation: 20deg; --card-delay: 0.04s; }
+.ambient-pattern-card:nth-child(4) { --card-x: 40px; --card-rotation: 55deg; --card-delay: 0.12s; }
+@keyframes ambient-card-fan {
+  0%, 10% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(0deg) rotateY(0deg) scale(0.85);
+  }
+  18% { opacity: 1; }
+  65%, 82% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateX(var(--card-x)) rotate(var(--card-rotation)) rotateY(180deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7) rotateY(180deg);
+  }
+}
 .ai-build-activity {
   margin-top: 80px;
 }
@@ -1349,6 +1602,26 @@ blockquote em {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .ai-work-featured--tabum.ambient-pipeline-active .project-row::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+  .ambient-territory-active .ambient-territory-rule::before,
+  .ambient-territory-active .ambient-territory-rule::after,
+  .ambient-territory-active .ambient-territory-rule .ambient-territory-pulse,
+  .ambient-codex-heading.ambient-codex-active .ambient-usage-meter,
+  .ambient-codex-heading.ambient-codex-active .ambient-usage-fill {
+    animation: none !important;
+    transform: none !important;
+    opacity: 0 !important;
+  }
+  .ambient-card-fan {
+    display: none !important;
+  }
+  .ambient-food-slots,
+  .ambient-food-slots.is-fading {
+    display: none !important;
+  }
   .case-study-placeholder-mark img,
   .ai-project-thumbnail {
     transition-duration: 0.001ms !important;
@@ -1839,6 +2112,26 @@ main,
       width: 100%;
       max-width: 100%;
       object-fit: contain;
+    }
+    .ambient-food-slots,
+    .ambient-usage-meter,
+    .ambient-card-fan {
+      left: auto;
+      right: 0;
+      top: calc(100% + 6px);
+      transform: none;
+    }
+    .ambient-card-fan {
+      top: calc(100% + 8px);
+    }
+    .ai-work-featured--tabum.ambient-pipeline-active .project-row::after,
+    .ambient-food-slots,
+    .ambient-territory-active .ambient-territory-rule::before,
+    .ambient-territory-active .ambient-territory-rule::after,
+    .ambient-territory-active .ambient-territory-pulse,
+    .ambient-codex-heading.ambient-codex-active .ambient-usage-meter,
+    .ambient-card-fan {
+      display: none !important;
     }
 }
 
