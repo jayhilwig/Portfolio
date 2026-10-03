@@ -746,6 +746,16 @@ h1 {
 .work--earlier {
   padding-block: 56px;
 }
+.work--case-study-page {
+  padding-bottom: 56px;
+}
+#work.work--case-study-page {
+  border-top: 0;
+}
+.work--case-study-page + .work--case-study-page {
+  margin-top: 0;
+  padding-top: 56px;
+}
 .work--earlier .section-head {
   margin-bottom: 32px;
 }
@@ -757,9 +767,6 @@ h1 {
 }
 .work--earlier .project-row {
   padding-block: 12px;
-}
-.work--earlier .case-study-link {
-  margin-top: 24px;
 }
 .section-head {
   margin-bottom: 72px;
@@ -792,24 +799,22 @@ h2 {
 .case-study-media {
   aspect-ratio: 16 / 9;
   background: transparent;
-  border: none;
   padding: 0;
   min-height: 0;
   position: relative;
-  overflow: visible;
   display: block;
+}
+.case-study-media,
+.ai-project-visual,
+.build-activity .github-activity-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
 }
 .case-study-media-link {
   display: block;
   color: inherit;
   text-decoration: none;
-}
-.case-study-media-link .case-study-placeholder-mark {
-  border-color: var(--link);
-}
-.case-study-media-link:hover .case-study-placeholder-mark,
-.case-study-media-link:focus-visible .case-study-placeholder-mark {
-  border-color: var(--link);
 }
 .case-study-media-link:focus-visible {
   outline: 2px solid var(--link);
@@ -825,9 +830,9 @@ h2 {
   width: 100%;
   aspect-ratio: 16 / 9;
   background: transparent;
-  border: 1px dashed rgba(0, 0, 0, 0.18);
-  padding: 20px;
-  /* set to 0 if you want the border flush with the image */
+  border: 0;
+  padding: 0;
+  border-radius: inherit;
   box-sizing: border-box;
   display: block;
   overflow: hidden;
@@ -844,7 +849,9 @@ h2 {
   transition: transform 0.25s ease;
 }
 .case-study-media-link:hover .case-study-placeholder-mark img,
-.case-study-media-link:focus-visible .case-study-placeholder-mark img {
+.case-study-media-link:focus-visible .case-study-placeholder-mark img,
+.ai-project-image-link:hover .ai-project-thumbnail,
+.ai-project-image-link:focus-visible .ai-project-thumbnail {
   transform: scale(1.01);
 }
 .case-study-placeholder-note {
@@ -855,7 +862,7 @@ h2 {
 }
 .case-study-placeholder--brp .case-study-placeholder-mark {
   background: #ffffff;
-  padding: 1px;
+  padding: 0;
 }
 .case-study-placeholder--brp .case-study-placeholder-mark svg {
   width: 100%;
@@ -921,79 +928,21 @@ h2 {
   color: #666;
   max-width: 22rem;
 }
-.ai-placeholder {
-  aspect-ratio: 16 / 9;
-  border: 1px solid rgba(0, 0, 0, 0.14);
-  min-height: 260px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
-  background: #f7f7f7;
-}
-.ai-placeholder {
-  aspect-ratio: 16 / 9;
-  border: 1px solid rgba(0, 0, 0, 0.14);
-  min-height: 260px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
-  background:
-    radial-gradient(
-      circle at 0% 100%,
-      rgba(0, 0, 0, 0.16) 0 1.5px,
-      transparent 2px
-    ),
-    linear-gradient(135deg, rgba(0, 0, 0, 0.08), transparent 42%), #f7f7f7;
-  background-size:
-    28px 28px,
-    auto,
-    auto;
-}
-.tool-logo-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
-  gap: 28px;
+.ai-project-visual {
   width: 100%;
-  max-width: 420px;
-  align-items: center;
+  min-width: 0;
+  box-sizing: border-box;
 }
-.tool-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 18px;
-  min-height: 92px;
-  background: rgba(255, 255, 255, 0.76);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.055);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+.ai-project-image-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
-.tool-logo img {
-  max-width: 100%;
-  width: auto;
-  height: 28px;
-  max-height: 28px;
-  object-fit: contain;
-  opacity: 0.9;
-}
-.tool-logo--openweather img {
-  height: 46px;
-  max-height: 46px;
-}
-.tool-logo--figma img {
-  height: 28px;
-  max-height: 28px;
-  max-width: 150px;
-}
-.tool-logo-grid--codex-usage .tool-logo {
-  min-height: 132px;
+.ai-project-thumbnail {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.25s ease;
 }
 .ai-work-block {
   display: grid;
@@ -1170,50 +1119,13 @@ h2 {
   max-width: 18ch;
   margin: 0 0 16px;
 }
-.case-study-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 32px;
-  color: var(--link);
-  font-family: "Inter Tight", system-ui, sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  text-decoration: none;
-}
-.case-study-link:hover {
-  color: var(--link);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
 .case-study-placeholder-mark {
   aspect-ratio: 16 / 9;
 }
 .case-study-placeholder-mark img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
-}
-.arrow-mark {
-  width: 52px;
-  height: 52px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  background: var(--accent);
-  border: 4px solid transparent;
-  transition: border-color 0.45s ease;
-  flex: 0 0 auto;
-}
-.case-study-link:hover .arrow-mark {
-  background: var(--accent);
-  border-color: var(--link);
-}
-.arrow-mark svg {
-  width: 28px;
-  height: 28px;
-  display: block;
 }
 .subcopy,
 .ai-copy,
@@ -1437,6 +1349,10 @@ blockquote em {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .case-study-placeholder-mark img,
+  .ai-project-thumbnail {
+    transition-duration: 0.001ms !important;
+  }
   .hero-clarity,
   .tf-tool-carousel-motion,
   .hero-system-art *,
@@ -1460,10 +1376,10 @@ blockquote em {
 .case-study-placeholder--aloft .case-study-placeholder-mark {
   display: inline-block;
   aspect-ratio: auto;
-  /* remove forced 16:9 */
   padding: 0;
-  border: 1px dashed var(--link);
+  border: 0;
   background: transparent;
+  border-radius: inherit;
   box-sizing: border-box;
   max-width: 100%;
 }
@@ -1480,7 +1396,8 @@ blockquote em {
   aspect-ratio: auto !important;
   min-height: 0 !important;
   padding: 0 !important;
-  overflow: visible !important;
+  border-radius: 12px;
+  overflow: hidden !important;
 }
 .project-table--no-top {
   border-top: none;
@@ -1659,11 +1576,7 @@ blockquote em {
   margin-top: 22px;
   overflow: hidden;
   background: transparent;
-  border: 1px dashed var(--link);
-  padding: 12px;
-}
-.build-activity .github-activity-card:hover {
-  border-color: var(--link);
+  padding: 0;
 }
 .build-activity .github-activity-card:focus-visible {
   outline: 2px solid var(--link);
@@ -1805,34 +1718,6 @@ main,
     .dark-grid > div {
       min-width: 0 !important;
       max-width: 100% !important;
-    }
-    .ai-placeholder {
-      width: 100% !important;
-      max-width: 100% !important;
-      min-width: 0 !important;
-      overflow: hidden !important;
-      aspect-ratio: auto !important;
-      min-height: 0 !important;
-    }
-    .tool-logo-grid {
-      width: 100% !important;
-      max-width: 100% !important;
-      min-width: 0 !important;
-      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    }
-    .tool-logo {
-      min-width: 0 !important;
-      max-width: 100% !important;
-    }
-    .tool-logo img,
-    .tool-logo svg {
-      width: auto !important;
-      max-width: 100% !important;
-      height: auto !important;
-    }
-    .case-study-link {
-      width: 100%;
-      min-width: 0;
     }
 }
 
@@ -2013,25 +1898,4 @@ main,
   .tf-tool-carousel-item {
     width: calc((100vw - 48px) / 2);
   }
-  .ai-placeholder {
-      padding: 16px !important;
-    }
-    .tool-logo-grid {
-      grid-template-columns: 1fr !important;
-      gap: 12px !important;
-    }
-    .tool-logo {
-      min-height: 68px !important;
-      padding: 12px !important;
-    }
-    .tool-logo img,
-    .tool-logo svg {
-      max-height: 28px !important;
-    }
-    .tool-logo-grid--codex-usage .tool-logo {
-      min-height: 88px !important;
-    }
-    .case-study-link {
-      align-items: flex-start;
-    }
 }
