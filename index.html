@@ -78,8 +78,8 @@
       crossorigin
     />
 
-    <link rel="preload" href="styles.css?v=homepage-media-6" as="style" />
-    <link rel="stylesheet" href="styles.css?v=homepage-media-6" />
+    <link rel="preload" href="styles.css?v=homepage-ai-work-1" as="style" />
+    <link rel="stylesheet" href="styles.css?v=homepage-ai-work-1" />
     <link rel="manifest" href="manifest.webmanifest" />
     <meta name="format-detection" content="telephone=no" />
 
@@ -183,25 +183,12 @@
 
     <main id="top">
       <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <div class="eyebrow">Product designer</div>
-            <h1>Designing <span class="hero-clarity">clarity</span> in <span class="hero-complex" data-text="complex">complex</span> systems.</h1>
-          </div>
-
-          <div class="hero-side">
-            <div>
-              Product systems across customer journeys, internal operations,
-              risk, and trust.
-            </div>
-            <div>
-              Moves from product framing and interaction design into AI
-              workflows, APIs, data, and working prototypes.
-            </div>
-            <div>
-              Enterprise depth across Amazon, Microsoft, Nuance, and B2B SaaS.
-            </div>
-          </div>
+        <div class="container">
+          <div class="eyebrow">Product designer</div>
+          <h1>
+            Designing <span class="hero-clarity">clarity</span> in
+            <span class="hero-headline-line"><span class="hero-complex" data-text="complex">complex</span> systems.</span>
+          </h1>
         </div>
       </section>
 
@@ -209,36 +196,34 @@
         <div class="container dark-grid">
           <div>
             <div class="section-label">Highlights</div>
-            <h2 class="section-title">Selected outcomes.</h2>
+            <h2 class="section-title">Amazon outcomes.</h2>
             <p class="section-copy">
-              Customer, operational, and AI-assisted systems measured by what
-              changed for customers and the business.
+              Nine years, three roles: counterfeits, fraud, and support tools.
             </p>
           </div>
 
           <div class="accordion-list">
             <details class="accordion-item" open>
               <summary class="accordion-trigger">
-                <span class="accordion-label">Purchase impact</span>
+                <span class="accordion-label">Counterfeit protection</span>
                 <span class="accordion-plus">+</span>
               </summary>
               <div class="accordion-content">
-                Following launch, products enrolled in Amazon Transparency saw
-                purchase rates increase by <strong>2%</strong> and returns
-                decrease by <strong>6%</strong>.
+                Led design for Transparency. Enrolled products saw purchase
+                rates up <strong>2%</strong> and returns down <strong>6%</strong>.
               </div>
             </details>
 
             <details class="accordion-item" open>
               <summary class="accordion-trigger">
-                <span class="accordion-label">Amazon Buyer Risk Prevention</span>
+                <span class="accordion-label">Fraud prevention</span>
                 <span class="accordion-plus">+</span>
               </summary>
               <div class="accordion-content">
-                Account resolution improved from
-                <strong>2–3 days → ~5 min.</strong>, with
-                <strong>−2% false positives</strong> and
-                <strong>−5% false negatives</strong>.
+                Redesigned account resolution for Buyer Risk Prevention:
+                <strong>2-3 days down to ~5 minutes</strong>, with
+                <strong>2% fewer false positives</strong> and
+                <strong>5% fewer false negatives</strong>.
                 <a href="/amazon-buyer-risk-prevention"
                   >View the case study.</a
                 >
@@ -247,13 +232,12 @@
 
             <details class="accordion-item" open>
               <summary class="accordion-trigger">
-                <span class="accordion-label">Onboarding speed</span>
+                <span class="accordion-label">Support tooling</span>
                 <span class="accordion-plus">+</span>
               </summary>
               <div class="accordion-content">
-                Built internal guided workflows that cut new customer service
-                representative onboarding from
-                <strong>8 weeks to 2 weeks</strong>.
+                Built guided workflows for customer service reps, cutting
+                onboarding from <strong>8 weeks to 2</strong>.
               </div>
             </details>
           </div>
@@ -895,18 +879,40 @@
               <span class="accordion-plus" aria-hidden="true">+</span>
             </summary>
 
-            <article class="ai-work-featured personal-product-intro">
-              <h3 class="lead-text">VanSide</h3>
-              <p class="subcopy">
-                An AI-supported desktop tool for interview practice that helps
-                candidates prepare examples from their experience and reflect on
-                their answers.
-              </p>
-              <a class="case-study-link" href="https://github.com/jayhilwig/vantside">View VanSide on GitHub</a>
+            <article class="ai-work-block ai-work-featured personal-product-intro">
+              <div>
+                <h3 class="lead-text">VantSide</h3>
+                <p class="subcopy">
+                  An AI-supported desktop tool for interview practice that helps
+                  candidates prepare examples from their experience and reflect on
+                  their answers.
+                </p>
+              </div>
+              <div>
+                <a
+                  class="ai-project-image-link"
+                  href="https://vantside.com/"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Visit VantSide"
+                >
+                  <div class="ai-project-visual">
+                    <img
+                      class="ai-project-thumbnail"
+                      src="public/images/ai_thumbs/vantside.webp"
+                      alt="VantSide desktop app with career memory and interview preparation steps"
+                      width="572"
+                      height="406"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </a>
+              </div>
             </article>
 
           <!-- tabum case study content -->
-          <div class="ai-work-block ai-work-featured ai-work-featured--tabum">
+          <div class="ai-work-block ai-work-featured">
             <div>
               <h3 class="lead-text">Tabum</h3>
               <p class="subcopy">
@@ -914,39 +920,6 @@
                 generates concise summaries, and highlights patterns across
                 coverage.
               </p>
-
-              <div class="project-table">
-                <article class="project-row">
-                  <div>
-                    <div class="project-title">Summarization workflows</div>
-                    <div class="project-desc">
-                      Prompt and JSON pipelines for consistent summaries.
-                    </div>
-                  </div>
-                  <div class="project-meta">OpenAI</div>
-                </article>
-
-                <article class="project-row">
-                  <div>
-                    <div class="project-title">Aggregation system</div>
-                    <div class="project-desc">
-                      Source ingestion, normalization, and scheduled processing.
-                    </div>
-                  </div>
-                  <div class="project-meta">Apify + Cron</div>
-                </article>
-
-                <article class="project-row">
-                  <div>
-                    <div class="project-title">Utility layer</div>
-                    <div class="project-desc">
-                      Weather and lightweight personalization.
-                    </div>
-                  </div>
-                  <div class="project-meta">OpenWeather</div>
-                </article>
-              </div>
-
             </div>
 
             <div>
@@ -973,38 +946,13 @@
           </div>
 
           <!-- Eat Safely -->
-          <div class="ai-work-block ai-work-featured ai-work-featured--eat-safely">
+          <div class="ai-work-block ai-work-featured">
             <div>
-              <h3 class="lead-text ambient-eat-heading">Eat Safely</h3>
+              <h3 class="lead-text">Eat Safely</h3>
               <p class="subcopy">
-                A public food-safety tracker that combines federal recall and
-                outbreak data into a simple answer: what should I avoid buying
-                or eating today?
+                A public food safety tracker that combines federal recall and
+                outbreak data to show which foods to avoid.
               </p>
-
-              <div class="project-table">
-                <article class="project-row">
-                  <div>
-                    <div class="project-title">Federal data ingestion</div>
-                    <div class="project-desc">FDA + USDA + CDC</div>
-                  </div>
-                </article>
-
-                <article class="project-row">
-                  <div>
-                    <div class="project-title">Classification + normalization</div>
-                    <div class="project-desc">Structured incident pipeline</div>
-                  </div>
-                </article>
-
-                <article class="project-row">
-                  <div>
-                    <div class="project-title">Public safety interface</div>
-                    <div class="project-desc">Next.js + Supabase</div>
-                  </div>
-                </article>
-              </div>
-
             </div>
 
             <div>
@@ -1031,7 +979,7 @@
           </div>
 
           <!-- White House War -->
-          <div class="ai-work-block ai-work-featured ai-work-featured--white-house-war">
+          <div class="ai-work-block ai-work-featured">
             <div>
               <h3 class="lead-text">White House War</h3>
               <p class="subcopy">
@@ -1039,30 +987,6 @@
                 White House map, persistent room ownership, escalating purchase
                 prices, and player-selected room themes.
               </p>
-
-              <div class="project-table">
-                <article class="project-row ambient-territory-rule">
-                  <div>
-                    <div class="project-title">Interactive game system</div>
-                    <div class="project-desc">Next.js + React</div>
-                  </div>
-                </article>
-
-                <article class="project-row ambient-territory-rule">
-                  <div>
-                    <div class="project-title">Persistent ownership + realtime</div>
-                    <div class="project-desc">Supabase + Postgres</div>
-                  </div>
-                </article>
-
-                <article class="project-row ambient-territory-rule">
-                  <div>
-                    <div class="project-title">Checkout + fulfillment</div>
-                    <div class="project-desc">Stripe webhooks</div>
-                  </div>
-                </article>
-              </div>
-
             </div>
 
             <div>
@@ -1089,38 +1013,14 @@
           </div>
 
           <!-- Codex Usage -->
-          <div class="ai-work-block ai-work-featured ai-work-featured--codex-usage">
+          <div class="ai-work-block ai-work-featured">
             <div>
-              <h3 class="lead-text ambient-codex-heading">Codex Usage</h3>
+              <h3 class="lead-text">Codex Usage</h3>
               <p class="subcopy">
                 A cross-platform desktop plugin for tracking Codex usage and
                 reset limits, published in the official OpenAI Plugins
                 marketplace.
               </p>
-
-              <div class="project-table">
-                <article class="project-row ambient-codex-meter-row">
-                  <div>
-                    <div class="project-title">Usage visibility</div>
-                    <div class="project-desc">Daily + weekly limits</div>
-                  </div>
-                </article>
-
-                <article class="project-row">
-                  <div>
-                    <div class="project-title">Desktop integration</div>
-                    <div class="project-desc">Windows + macOS</div>
-                  </div>
-                </article>
-
-                <article class="project-row">
-                  <div>
-                    <div class="project-title">Plugin distribution</div>
-                    <div class="project-desc">OpenAI Plugins marketplace</div>
-                  </div>
-                </article>
-              </div>
-
             </div>
 
             <div>
@@ -1147,54 +1047,14 @@
           </div>
 
           <!-- Shape of AI flashcards -->
-          <div class="ai-work-block ai-work-featured ai-work-featured--shape-ai">
+          <div class="ai-work-block ai-work-featured">
             <div>
-              <h3 class="lead-text ambient-shape-heading">Shape of AI</h3>
+              <h3 class="lead-text">Shape of AI</h3>
               <p class="subcopy">
                 A pattern-based flashcard tool for designers exploring how AI
                 changes product behavior, interaction models, and interface
                 decisions.
               </p>
-
-              <div class="project-table">
-                <article class="project-row">
-                  <div>
-                    <div class="project-title">AI UX pattern system</div>
-                    <div class="project-desc">
-                      Organized emerging AI interaction patterns into a fast,
-                      scannable flashcard format.
-                    </div>
-                  </div>
-                  <div class="project-meta">AI interaction patterns</div>
-                </article>
-
-                <article class="project-row">
-                  <div>
-                    <div class="project-title">
-                      Designer-focused learning tool
-                    </div>
-                    <div class="project-desc">
-                      Framed AI concepts through practical UX behaviors,
-                      tradeoffs, and product examples.
-                    </div>
-                  </div>
-                  <div class="project-meta">UX education</div>
-                </article>
-
-                <article class="project-row">
-                  <div>
-                    <div class="project-title">
-                      Rapid AI prototyping workflow
-                    </div>
-                    <div class="project-desc">
-                      Used AI-assisted design and lightweight deployment to move
-                      quickly from concept to product.
-                    </div>
-                  </div>
-                  <div class="project-meta">Figma + v0 + Claude</div>
-                </article>
-              </div>
-
             </div>
 
             <div>
@@ -1231,21 +1091,12 @@
             <div class="ai-experiment-grid">
               <article class="ai-experiment-card">
                 <div>
-                  <div class="ai-experiment-status">Workflow prototype</div>
                   <h4>DocuFormer</h4>
                   <p>
                     A document automation prototype exploring how AI can help
                     parse, clean, transform, and reuse PDF-based content across
                     structured workflows.
                   </p>
-
-                  <div class="ai-experiment-tags">
-                    <span>VS Code</span>
-                    <span>OpenAI</span>
-                    <span>Claude</span>
-                    <span>Supabase</span>
-                    <span>PDF workflows</span>
-                  </div>
                 </div>
 
                 <div class="ai-experiment-media">
@@ -1272,21 +1123,12 @@
 
               <article class="ai-experiment-card">
                 <div>
-                  <div class="ai-experiment-status">Browser utility</div>
                   <h4>Hide AI Chatbots</h4>
                   <p>
                     A Chrome extension prototype that detects and hides floating
                     AI/chatbot widgets across websites, reducing interface
                     clutter and restoring focus.
                   </p>
-
-                  <div class="ai-experiment-tags">
-                    <span>Chrome extension</span>
-                    <span>JavaScript</span>
-                    <span>DOM detection</span>
-                    <span>CSS injection</span>
-                    <span>UX utility</span>
-                  </div>
                 </div>
 
                 <div class="ai-experiment-media">
@@ -1313,23 +1155,12 @@
 
               <article class="ai-experiment-card">
                 <div>
-                  <div class="ai-experiment-status">Workflow prototype</div>
                   <h4>Applia</h4>
                   <p>
                     A job application assistant that finds relevant roles,
                     tailors application materials, and shows transparent
                     evidence of what was submitted.
                   </p>
-
-                  <div class="ai-experiment-tags">
-                    <span>VS Code</span>
-                    <span>Next.js</span>
-                    <span>Supabase</span>
-                    <span>OpenAI</span>
-                    <span>Apify</span>
-                    <span>Playwright</span>
-                    <span>Job workflows</span>
-                  </div>
                 </div>
 
                 <div class="ai-experiment-media">
@@ -1356,21 +1187,12 @@
 
               <article class="ai-experiment-card">
                 <div>
-                  <div class="ai-experiment-status">Codex plugin</div>
                   <h4>Search for Codex</h4>
                   <p>
                     A Codex plugin for searching project files with familiar
                     controls for case sensitivity, whole-word matching, and
                     regular expressions.
                   </p>
-
-                  <div class="ai-experiment-tags">
-                    <span>Codex</span>
-                    <span>Plugin</span>
-                    <span>Local project search</span>
-                    <span>MCP</span>
-                    <span>Developer tools</span>
-                  </div>
                 </div>
 
                 <div class="ai-experiment-media ai-experiment-media--slideshow">
@@ -1399,24 +1221,12 @@
 
               <article class="ai-experiment-card">
                 <div>
-                  <div class="ai-experiment-status">
-                    Chrome extension
-                  </div>
                   <h4>Search for ChatGPT</h4>
                   <p>
                     A browser extension concept for searching, organizing, and
                     resurfacing past ChatGPT conversations more easily from
                     inside the browser.
                   </p>
-
-                  <div class="ai-experiment-tags">
-                    <span>VS Code</span>
-                    <span>Chrome extension</span>
-                    <span>JavaScript</span>
-                    <span>IndexedDB</span>
-                    <span>ChatGPT workflows</span>
-                    <span>Search UX</span>
-                  </div>
                 </div>
 
                 <div class="ai-experiment-media ai-experiment-media--search-gpt">
@@ -1812,343 +1622,6 @@
         }
       }
 
-      // Ambient animation experiment: viewport-triggered, one-shot events.
-      const ambientReduceMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)",
-      );
-      const ambientPhone = window.matchMedia("(max-width: 640px)");
-      const ambientTabumTable = document.querySelector(
-        ".ai-work-featured--tabum .project-table",
-      );
-      const ambientEatTable = document.querySelector(
-        ".ai-work-featured--eat-safely .project-table",
-      );
-      const ambientWhiteHouseTable = document.querySelector(
-        ".ai-work-featured--white-house-war .project-table",
-      );
-      const ambientCodexTable = document.querySelector(
-        ".ai-work-featured--codex-usage .project-table",
-      );
-      const ambientCodexHeading = document.querySelector(
-        ".ambient-codex-heading",
-      );
-      const ambientShapeTable = document.querySelector(
-        ".ai-work-featured--shape-ai .project-table",
-      );
-      let ambientFoodSlots;
-      const ambientCompleted = new Set();
-      const ambientPending = new Map();
-      let ambientObserver;
-      let ambientScrollTimer;
-      let ambientActive = false;
-      let ambientScrolling = false;
-
-      const ambientIsEligible = (element) => {
-        if (
-          !element ||
-          ambientReduceMotion.matches ||
-          ambientPhone.matches ||
-          document.hidden ||
-          ambientScrolling ||
-          element.matches(":hover, :focus, :focus-within") ||
-          element.contains(document.activeElement)
-        ) {
-          return false;
-        }
-
-        const bounds = element.getBoundingClientRect();
-        const visibleTop = Math.max(bounds.top, 0);
-        const visibleBottom = Math.min(bounds.bottom, window.innerHeight);
-        const visibleHeight = Math.max(0, visibleBottom - visibleTop);
-        return (
-          bounds.width > 0 &&
-          bounds.height > 0 &&
-          bounds.right > 0 &&
-          bounds.left < window.innerWidth &&
-          visibleHeight / bounds.height >= 0.6
-        );
-      };
-
-      const ambientCreateFoodSlots = (finish) => {
-        const heading = document.querySelector(".ambient-eat-heading");
-        if (!heading) {
-          finish();
-          return;
-        }
-        const foods = ["🍎", "🥬", "🍕", "🥚", "🍓", "🧀", "🥩", "🥕"];
-        const finalFoods = ["🍎", "🥬", "🍓"];
-        const slots = document.createElement("span");
-        slots.className = "ambient-food-slots";
-        slots.setAttribute("aria-hidden", "true");
-        const cells = finalFoods.map(() => {
-          const cell = document.createElement("span");
-          cell.className = "ambient-food-slot";
-          slots.appendChild(cell);
-          return cell;
-        });
-        heading.appendChild(slots);
-        ambientFoodSlots = slots;
-
-        let frame = 0;
-        const cycle = window.setInterval(() => {
-          cells.forEach((cell, index) => {
-            cell.textContent = foods[(frame + index * 2) % foods.length];
-          });
-          frame += 1;
-          if (frame >= 8) {
-            window.clearInterval(cycle);
-            cells.forEach((cell, index) => {
-              cell.textContent = finalFoods[index];
-            });
-            window.setTimeout(() => {
-              slots.classList.add("is-fading");
-              window.setTimeout(() => {
-                slots.remove();
-                ambientFoodSlots = null;
-                finish();
-              }, 350);
-            }, 450);
-          }
-        }, 120);
-      };
-
-      const ambientEffects = [
-        {
-          id: "tabum-pipeline",
-          target: ambientTabumTable,
-          delay: 900,
-          run: (finish) => {
-            const tabumBlock = ambientTabumTable.closest(
-              ".ai-work-featured--tabum",
-            );
-            tabumBlock.classList.add("ambient-pipeline-active");
-            window.setTimeout(() => {
-              tabumBlock.classList.remove("ambient-pipeline-active");
-              finish();
-            }, 1800);
-          },
-        },
-        {
-          id: "eat-safely-slots",
-          target: ambientEatTable,
-          delay: 850,
-          run: ambientCreateFoodSlots,
-        },
-        {
-          id: "white-house-territory",
-          target: ambientWhiteHouseTable,
-          delay: 900,
-          run: (finish) => {
-            const block = ambientWhiteHouseTable.closest(
-              ".ai-work-featured--white-house-war",
-            );
-            const rules = [
-              ...block.querySelectorAll(".ambient-territory-rule"),
-            ];
-            if (!rules.length) {
-              finish();
-              return;
-            }
-            const pulses = rules.map((rule) => {
-              const pulse = document.createElement("span");
-              pulse.className = "ambient-territory-pulse";
-              pulse.setAttribute("aria-hidden", "true");
-              rule.appendChild(pulse);
-              return pulse;
-            });
-            block.classList.add("ambient-territory-active");
-            window.setTimeout(() => {
-              block.classList.remove("ambient-territory-active");
-              pulses.forEach((pulse) => pulse.remove());
-              finish();
-            }, 2200);
-          },
-        },
-        {
-          id: "codex-usage-meter",
-          target: ambientCodexTable,
-          delay: 900,
-          run: (finish) => {
-            if (!ambientCodexHeading) {
-              finish();
-              return;
-            }
-            const meter = document.createElement("span");
-            meter.className = "ambient-usage-meter";
-            meter.setAttribute("aria-hidden", "true");
-            meter.innerHTML =
-              '<span class="ambient-usage-track"><span class="ambient-usage-fill"></span></span><span class="ambient-usage-label">$$</span>';
-            ambientCodexHeading.appendChild(meter);
-            ambientCodexHeading.classList.add("ambient-codex-active");
-            window.setTimeout(() => {
-              ambientCodexHeading.classList.remove("ambient-codex-active");
-              meter.remove();
-              finish();
-            }, 1700);
-          },
-        },
-        {
-          id: "shape-ai-cards",
-          target: ambientShapeTable,
-          delay: 900,
-          run: (finish) => {
-            const heading = document.querySelector(".ambient-shape-heading");
-            if (!heading) {
-              finish();
-              return;
-            }
-            const fan = document.createElement("span");
-            fan.className = "ambient-card-fan";
-            fan.setAttribute("aria-hidden", "true");
-            [["A", "♠"], ["K", "♥"], ["Q", "♣"], ["J", "♦"]].forEach(
-              ([rank, suit]) => {
-                const card = document.createElement("span");
-                card.className = "ambient-pattern-card";
-                const back = document.createElement("span");
-                back.className = "ambient-card-back";
-                const face = document.createElement("span");
-                face.className = "ambient-card-face";
-                face.textContent = `${rank}${suit}`;
-                card.append(back, face);
-                fan.appendChild(card);
-              },
-            );
-            heading.appendChild(fan);
-            window.setTimeout(() => {
-              fan.remove();
-              finish();
-            }, 2500);
-          },
-        },
-      ].filter((effect) => effect.target);
-
-      const ambientArm = (effect) => {
-        if (
-          ambientReduceMotion.matches ||
-          ambientCompleted.has(effect.id) ||
-          ambientPending.has(effect.id)
-        ) {
-          return;
-        }
-
-        const timer = window.setTimeout(() => {
-          ambientPending.delete(effect.id);
-          if (ambientCompleted.has(effect.id) || !ambientIsEligible(effect.target)) {
-            return;
-          }
-          if (ambientActive) {
-            ambientArm(effect);
-            return;
-          }
-
-          ambientCompleted.add(effect.id);
-          ambientActive = true;
-          effect.run(() => {
-            ambientActive = false;
-          });
-        }, effect.delay);
-        ambientPending.set(effect.id, timer);
-      };
-
-      const ambientCancelPending = () => {
-        ambientPending.forEach((timer) => window.clearTimeout(timer));
-        ambientPending.clear();
-      };
-
-      const ambientObserve = () => {
-        if (
-          ambientReduceMotion.matches ||
-          ambientPhone.matches ||
-          !("IntersectionObserver" in window)
-        ) {
-          return;
-        }
-
-        ambientObserver = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              const effect = ambientEffects.find(
-                (candidate) => candidate.target === entry.target,
-              );
-              if (!effect) return;
-              if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
-                ambientArm(effect);
-              } else {
-                const timer = ambientPending.get(effect.id);
-                if (timer) {
-                  window.clearTimeout(timer);
-                  ambientPending.delete(effect.id);
-                }
-              }
-            });
-          },
-          { threshold: [0, 0.6] },
-        );
-        ambientEffects.forEach((effect) => ambientObserver.observe(effect.target));
-      };
-
-      window.addEventListener(
-        "scroll",
-        () => {
-          ambientScrolling = true;
-          ambientCancelPending();
-          window.clearTimeout(ambientScrollTimer);
-          ambientScrollTimer = window.setTimeout(() => {
-            ambientScrolling = false;
-            ambientEffects.forEach((effect) => {
-              if (ambientIsEligible(effect.target)) ambientArm(effect);
-            });
-          }, 180);
-        },
-        { passive: true },
-      );
-      ambientReduceMotion.addEventListener?.("change", (event) => {
-        ambientCancelPending();
-        if (!event.matches) {
-          ambientObserve();
-          return;
-        }
-        ambientObserver?.disconnect();
-        ambientTabumTable
-          ?.closest(".ai-work-featured--tabum")
-          ?.classList.remove("ambient-pipeline-active");
-        document
-          .querySelector(".ai-work-featured--white-house-war")
-          ?.classList.remove("ambient-territory-active");
-        document
-          .querySelectorAll(".ambient-territory-pulse")
-          .forEach((pulse) => pulse.remove());
-        ambientCodexHeading?.classList.remove("ambient-codex-active");
-        document.querySelector(".ambient-usage-meter")?.remove();
-        document.querySelector(".ambient-card-fan")?.remove();
-        ambientFoodSlots?.remove();
-        ambientFoodSlots = null;
-        ambientActive = false;
-      });
-      ambientPhone.addEventListener?.("change", (event) => {
-        ambientCancelPending();
-        if (event.matches) {
-          ambientObserver?.disconnect();
-          ambientTabumTable
-            ?.closest(".ai-work-featured--tabum")
-            ?.classList.remove("ambient-pipeline-active");
-          document
-            .querySelector(".ai-work-featured--white-house-war")
-            ?.classList.remove("ambient-territory-active");
-          document
-            .querySelectorAll(".ambient-territory-pulse")
-            .forEach((pulse) => pulse.remove());
-          ambientCodexHeading?.classList.remove("ambient-codex-active");
-          document.querySelector(".ambient-usage-meter")?.remove();
-          document.querySelector(".ambient-card-fan")?.remove();
-          ambientFoodSlots?.remove();
-          ambientFoodSlots = null;
-          ambientActive = false;
-          return;
-        }
-        ambientObserve();
-      });
-      ambientObserve();
     </script>
   </body>
 </html>
