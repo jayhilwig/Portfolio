@@ -177,6 +177,113 @@
           <figure class="brp-investigator-primary">
             <img src="/public/images/brp/gw.webp" alt="Guided Workflows interface with guided questions, customer status choices, contextual hints, and order information" loading="lazy" decoding="async" />
           </figure>
+
+          <figure class="brp-investigator-primary brp-recovery-map">
+            <div class="brp-recovery-map-scroll" role="region" aria-label="Customer recovery system map" tabindex="0">
+              <svg
+                class="brp-home-system-map"
+                viewBox="0 0 1080 500"
+                role="img"
+                aria-label="Buyer Risk Prevention system map"
+                aria-describedby="brp-home-map-desc"
+              >
+                <desc id="brp-home-map-desc">
+                  A customer moves from a risk signal and restriction
+                  into self-service or customer-service support.
+                  Investigators review unresolved cases, record
+                  decisions, and create structured data that informs
+                  future system improvements.
+                </desc>
+                <defs>
+                  <linearGradient id="brp-home-line" x1="0" x2="1">
+                    <stop offset="0" stop-color="#6fd4e0"></stop>
+                    <stop offset="1" stop-color="#c6ff5f"></stop>
+                  </linearGradient>
+                  <filter id="brp-home-glow" x="-60%" y="-60%" width="220%" height="220%">
+                    <feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur>
+                    <feMerge>
+                      <feMergeNode in="blur"></feMergeNode>
+                      <feMergeNode in="SourceGraphic"></feMergeNode>
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <g class="brp-home-map-grid" aria-hidden="true">
+                  <path d="M40 100H1040M40 200H1040M40 300H1040M40 400H1040"></path>
+                  <path d="M180 40V460M360 40V460M540 40V460M720 40V460M900 40V460"></path>
+                </g>
+
+                <g class="brp-home-map-links" aria-hidden="true">
+                  <path d="M142 250H200"></path>
+                  <path d="M324 250H370"></path>
+                  <path d="M488 250C520 250 520 150 550 150"></path>
+                  <path d="M488 250C520 250 520 350 550 350"></path>
+                  <path d="M674 150C720 150 716 250 760 250"></path>
+                  <path d="M684 350C724 350 720 250 760 250"></path>
+                  <path d="M884 250H944"></path>
+                  <path d="M994 286C994 412 780 438 626 414"></path>
+                  <path d="M626 414C466 394 350 350 266 302"></path>
+                </g>
+
+                <g class="brp-home-map-node brp-home-map-node--customer">
+                  <rect x="42" y="214" width="100" height="72" rx="2"></rect>
+                  <text x="92" y="246" text-anchor="middle">Customer</text>
+                  <text class="brp-home-node-note" x="92" y="266" text-anchor="middle">needs access</text>
+                </g>
+                <g class="brp-home-map-node">
+                  <rect x="200" y="214" width="124" height="72" rx="2"></rect>
+                  <text x="262" y="246" text-anchor="middle">Risk signal</text>
+                  <text class="brp-home-node-note" x="262" y="266" text-anchor="middle">restriction</text>
+                </g>
+                <g class="brp-home-map-node brp-home-map-node--active" filter="url(#brp-home-glow)">
+                  <rect x="370" y="208" width="118" height="84" rx="2"></rect>
+                  <text x="429" y="244" text-anchor="middle">Recovery</text>
+                  <text class="brp-home-node-note" x="429" y="266" text-anchor="middle">trusted path</text>
+                </g>
+                <g class="brp-home-map-node">
+                  <rect x="550" y="94" width="124" height="112" rx="2"></rect>
+                  <image
+                    class="brp-home-node-icon"
+                    href="public/images/brp/self-service-structured-input-icon.svg"
+                    x="596"
+                    y="104"
+                    width="32"
+                    height="32"
+                    aria-hidden="true"
+                  ></image>
+                  <text x="612" y="166" text-anchor="middle">Self-service</text>
+                  <text class="brp-home-node-note" x="612" y="187" text-anchor="middle">structured input</text>
+                </g>
+                <g class="brp-home-map-node">
+                  <rect x="550" y="312" width="134" height="76" rx="2"></rect>
+                  <text x="617" y="345" text-anchor="middle">Customer service</text>
+                  <text class="brp-home-node-note" x="617" y="366" text-anchor="middle">human fallback</text>
+                </g>
+                <g class="brp-home-map-node">
+                  <rect x="760" y="194" width="124" height="112" rx="2"></rect>
+                  <image
+                    class="brp-home-node-icon"
+                    href="public/images/brp/investigator-guided-workflow-icon.svg"
+                    x="806"
+                    y="204"
+                    width="32"
+                    height="32"
+                    aria-hidden="true"
+                  ></image>
+                  <text x="822" y="266" text-anchor="middle">Investigator</text>
+                  <text class="brp-home-node-note" x="822" y="287" text-anchor="middle">expert judgment</text>
+                </g>
+                <g class="brp-home-map-node brp-home-map-node--decision">
+                  <rect x="944" y="214" width="100" height="72" rx="2"></rect>
+                  <text x="994" y="246" text-anchor="middle">Decision</text>
+                  <text class="brp-home-node-note" x="994" y="266" text-anchor="middle">next step</text>
+                </g>
+                <g class="brp-home-feedback-label" aria-hidden="true">
+                  <text x="626" y="439">STRUCTURED CONTEXT → ANALYSIS → WORKFLOW IMPROVEMENT</text>
+                </g>
+              </svg>
+            </div>
+          </figure>
         </div>
       </section>
 

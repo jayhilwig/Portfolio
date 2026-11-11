@@ -832,6 +832,24 @@
   object-position: top;
 }
 
+.brp-investigator-primary.brp-recovery-map {
+  margin-top: var(--brp-space-6);
+}
+.brp-recovery-map-scroll {
+  overflow-x: auto;
+  background: #071011;
+}
+.brp-recovery-map-scroll:focus-visible {
+  outline: 2px solid var(--brp-cyan);
+  outline-offset: -2px;
+}
+.brp-recovery-map .brp-home-system-map {
+  display: block;
+  width: 100%;
+  min-width: 720px;
+  height: auto;
+}
+
 .brp-customer-composition figcaption,
 .brp-investigator-recreation figcaption {
   position: absolute;
