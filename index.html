@@ -58,6 +58,13 @@
 
     <link
       rel="preload"
+      href="fonts/FTRegolaNeue-Medium.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
       href="fonts/FTRegolaNeue-Regular.woff2"
       as="font"
       type="font/woff2"
@@ -78,8 +85,8 @@
       crossorigin
     />
 
-    <link rel="preload" href="styles.css?v=homepage-panels-2" as="style" />
-    <link rel="stylesheet" href="styles.css?v=homepage-panels-2" />
+    <link rel="preload" href="styles.css?v=homepage-editorial-hero" as="style" />
+    <link rel="stylesheet" href="styles.css?v=homepage-editorial-hero" />
     <link rel="manifest" href="manifest.webmanifest" />
     <meta name="format-detection" content="telephone=no" />
 
@@ -183,12 +190,14 @@
 
     <main id="top" class="home-main">
       <section class="hero">
-        <div class="eyebrow">Product designer</div>
-        <h1>
-          <span class="hero-panel hero-panel--lead">Designing <span class="hero-clarity">clarity</span> in</span>
-          <span class="hero-panel hero-panel--word hero-panel--complex">complex</span>
-          <span class="hero-panel hero-panel--word">systems.</span>
-        </h1>
+        <div class="container">
+          <p class="eyebrow">Product designer</p>
+          <h1>
+            <span class="hero-headline-line">Designing <span class="hero-clarity">clarity</span> in</span>
+            complex systems.
+          </h1>
+          <p class="hero-copy">Enterprise platforms, trust and safety, and AI-assisted workflows.</p>
+        </div>
       </section>
 
       <!--

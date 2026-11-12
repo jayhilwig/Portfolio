@@ -83,7 +83,7 @@
     </script>
 
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="brp.css?v=case-study-v3" />
+    <link rel="stylesheet" href="brp.css?v=case-study-v3.1" />
     <link rel="stylesheet" href="lite-light.css" />
 
     <!-- Mouseflow -->
@@ -160,7 +160,6 @@
                   decoding="async"
                 />
               </button>
-              <figcaption>AI-reconstructed visualization based on original screens. Interface details and values are illustrative.</figcaption>
             </figure>
           </div>
 
@@ -340,59 +339,56 @@
 
       <section class="brp-chapter brp-decisions" id="decisions" aria-labelledby="decisions-title">
         <div class="container">
-          <p class="brp-chapter-index"><strong>03</strong> Key design decisions</p>
-          <div class="brp-chapter-intro brp-decisions-intro">
-            <h2 id="decisions-title">Three decisions shaped the experience.</h2>
-            <p>Three decisions connected customer clarity with structured evidence and investigator judgment.</p>
-          </div>
+          <h2 id="decisions-title">
+            <span class="brp-chapter-index"><strong>03</strong></span>
+            Key design decisions
+          </h2>
 
-          <div class="brp-decision-duo">
-            <article class="brp-decision-callout" id="customer-recovery">
-              <p class="brp-decision-label"><strong>01</strong> Customer reporting</p>
-              <h3>Start with what people recognize.</h3>
-              <p>The reporting experience asked customers to identify activity they did not authorize using terms they would recognize.</p>
-              <p class="brp-rationale"><strong>Design rationale</strong> Make the first step concrete so the customer can provide usable input.</p>
-            </article>
-            <article class="brp-decision-callout">
-              <p class="brp-decision-label"><strong>02</strong> Order context</p>
-              <h3>Ask about the orders that matter.</h3>
-              <p>Customers could review suspicious orders and identify related activity before submitting a report.</p>
-              <p class="brp-rationale"><strong>Design rationale</strong> Gather structured details while the customer still has the context to recognize them.</p>
-            </article>
-          </div>
-        </div>
-
-        <article class="brp-investigator-decision" id="guided-workflows">
-          <div class="container brp-investigator-grid">
-            <div class="brp-decision-callout">
-              <p class="brp-decision-label"><strong>03</strong> Investigator decision support</p>
-              <h3>Guide the decision. Keep the judgment.</h3>
-              <p>I designed dynamic, SOP-informed workflows that brought case-specific questions and customer information into a structured review experience for fraud investigators.</p>
-              <p class="brp-rationale"><strong>Design rationale</strong> Support faster, more consistent work while keeping the final decision with the investigator.</p>
-            </div>
-
-            <figure class="brp-showcase">
-              <button class="brp-image-button" type="button" aria-label="Enlarge investigator workflow visualization">
-                <img
-                  src="/public/images/brp/investigator-showcase.webp"
-                  data-lightbox="/public/images/brp/investigator-showcase.webp"
-                  alt="Reconstructed investigator workspace showing guided questions and order context"
-                  width="1448"
-                  height="1086"
-                  loading="lazy"
-                  decoding="async"
-                />
-              </button>
-              <figcaption>AI-reconstructed visualization based on the original investigator interface. Interface details and values are illustrative.</figcaption>
-            </figure>
-          </div>
-        </article>
-
-        <div class="brp-decision-summary">
-          <div class="container">
-            <strong>One principle across both sides</strong>
-            <p>Make the next step clear and give the next person in the workflow enough context to act.</p>
-          </div>
+          <ol class="brp-decision-items" role="list">
+            <li class="brp-decision-callout" id="customer-recovery">
+              <div>
+                <p class="brp-decision-label">Decision 01 / Customer reporting</p>
+                <h3>Start with what people recognize.</h3>
+              </div>
+              <div class="brp-decision-detail">
+                <p>The reporting experience asked customers to identify activity they did not authorize using terms they would recognize.</p>
+                <p class="brp-rationale"><strong>Design rationale</strong> Make the first step concrete so the customer can provide usable input.</p>
+              </div>
+            </li>
+            <li class="brp-decision-callout">
+              <div>
+                <p class="brp-decision-label">Decision 02 / Order context</p>
+                <h3>Ask about the orders that matter.</h3>
+              </div>
+              <div class="brp-decision-detail">
+                <p>Customers could review suspicious orders and identify related activity before submitting a report.</p>
+                <p class="brp-rationale"><strong>Design rationale</strong> Gather structured details while the customer still has the context to recognize them.</p>
+              </div>
+            </li>
+            <li class="brp-decision-callout" id="guided-workflows">
+              <div>
+                <p class="brp-decision-label">Decision 03 / Investigator decision support</p>
+                <h3>Guide the decision. Keep the judgment.</h3>
+              </div>
+              <div class="brp-decision-detail">
+                <p>I designed dynamic, SOP-informed workflows that brought case-specific questions and customer information into a structured review experience for fraud investigators.</p>
+                <p class="brp-rationale"><strong>Design rationale</strong> Support faster, more consistent work while keeping the final decision with the investigator.</p>
+                <figure class="brp-showcase">
+                  <button class="brp-image-button" type="button" aria-label="Enlarge investigator workflow visualization">
+                    <img
+                      src="/public/images/brp/investigator-showcase.webp"
+                      data-lightbox="/public/images/brp/investigator-showcase.webp"
+                      alt="Reconstructed investigator workspace showing guided questions and order context"
+                      width="1448"
+                      height="1086"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+                </figure>
+              </div>
+            </li>
+          </ol>
         </div>
       </section>
 
