@@ -2417,16 +2417,30 @@
   line-height: 1.4;
   letter-spacing: -0.02em;
 }
-.brp-focus-areas {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px 16px;
-  margin: clamp(24px, 3vw, 36px) 0 0;
-  padding: 16px 0 0;
-  border-top: 1px solid var(--brp-line);
+.brp-overview-experiences {
+  display: grid;
+  gap: 16px;
+  margin: 14px 0 0;
+  padding: 0;
   color: var(--brp-muted-strong);
   list-style: none;
-  font-size: 0.78rem;
+  font-size: clamp(14px, 1.1vw, 16px);
+  line-height: 1.52;
+}
+.brp-overview-experiences li {
+  display: grid;
+  grid-template-columns: 29px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+}
+.brp-experience-number {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #f9fbf8;
+  color: #122022;
+  font: 500 16px/1 var(--brp-display);
 }
 .brp-showcase img {
   display: block;
@@ -2490,6 +2504,13 @@
 .brp-chapter-intro {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: end;
+}
+.brp-v3 #problem-title {
+  max-width: none;
+  font-size: clamp(25px, 3.6vw, 50px);
+}
+.brp-impact .brp-chapter-lede strong {
+  color: var(--brp-paper-text);
 }
 .brp-constraints {
   display: grid;
@@ -2626,6 +2647,9 @@
 }
 .brp-v3 .brp-decision-detail > figure {
   margin-top: 24px;
+}
+.brp-showcase--phone {
+  max-width: 460px;
 }
 .brp-v3 .brp-rationale {
   margin-top: 22px;

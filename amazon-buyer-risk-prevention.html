@@ -83,7 +83,7 @@
     </script>
 
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="brp.css?v=case-study-v3.1" />
+    <link rel="stylesheet" href="brp.css?v=case-study-v4.1" />
     <link rel="stylesheet" href="lite-light.css" />
 
     <!-- Mouseflow -->
@@ -136,16 +136,11 @@
               <p class="brp-chapter-index"><strong>01</strong> Overview</p>
               <p class="brp-eyebrow">Amazon / Buyer Risk Prevention</p>
               <h1 id="overview-title">Account recovery should take minutes, not days.</h1>
-              <p class="brp-chapter-lede">
-                I designed two connected experiences: a clearer way for customers to report
-                unauthorized account activity, and guided workflows that helped fraud
-                investigators make informed decisions.
-              </p>
-              <ul class="brp-focus-areas" aria-label="Design focus">
-                <li>Customer recovery</li>
-                <li>Investigator decision support</li>
-                <li>Trust &amp; safety</li>
-              </ul>
+              <p class="brp-chapter-lede">I designed two connected experiences;</p>
+              <ol class="brp-overview-experiences" role="list">
+                <li><span class="brp-experience-number" aria-hidden="true">1</span><span>A clear way for customers to report unauthorized account activity.</span></li>
+                <li><span class="brp-experience-number" aria-hidden="true">2</span><span>Guided workflows in an internal tool that help fraud investigators make informed decisions by following standard operating procedures (SOPs).</span></li>
+              </ol>
             </div>
 
             <figure class="brp-showcase">
@@ -175,7 +170,7 @@
         <div class="container">
           <p class="brp-chapter-index"><strong>02</strong> Problem &amp; constraints</p>
           <div class="brp-chapter-intro">
-            <h2 id="problem-title">Help the right customer. Stop the wrong activity.</h2>
+            <h2 id="problem-title">Help the right customer.<br />Stop the wrong activity.</h2>
             <p class="brp-chapter-lede">
               A restricted account is a high-stakes moment. Legitimate customers need a way
               back in, while the recovery process has to surface useful evidence and support
@@ -353,6 +348,20 @@
               <div class="brp-decision-detail">
                 <p>The reporting experience asked customers to identify activity they did not authorize using terms they would recognize.</p>
                 <p class="brp-rationale"><strong>Design rationale</strong> Make the first step concrete so the customer can provide usable input.</p>
+                <figure class="brp-showcase brp-showcase--phone">
+                  <button class="brp-image-button" type="button" aria-label="Enlarge activity reporting image">
+                    <img
+                      src="/public/images/brp/activity-reporting.webp"
+                      data-lightbox="/public/images/brp/activity-reporting.webp"
+                      alt="Phone showing account activity reporting, with Orders placed selected"
+                      width="1024"
+                      height="1048"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+                  <figcaption>Conceptual illustration of the activity reporting pattern.</figcaption>
+                </figure>
               </div>
             </li>
             <li class="brp-decision-callout">
@@ -363,6 +372,20 @@
               <div class="brp-decision-detail">
                 <p>Customers could review suspicious orders and identify related activity before submitting a report.</p>
                 <p class="brp-rationale"><strong>Design rationale</strong> Gather structured details while the customer still has the context to recognize them.</p>
+                <figure class="brp-showcase brp-showcase--phone">
+                  <button class="brp-image-button" type="button" aria-label="Enlarge order review image">
+                    <img
+                      src="/public/images/brp/order-review.webp"
+                      data-lightbox="/public/images/brp/order-review.webp"
+                      alt="Phone showing an account security review of unrecognized orders and related activity"
+                      width="944"
+                      height="1127"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+                  <figcaption>Conceptual illustration of the order review pattern.</figcaption>
+                </figure>
               </div>
             </li>
             <li class="brp-decision-callout" id="guided-workflows">
@@ -398,8 +421,8 @@
           <div class="brp-chapter-intro">
             <h2 id="impact-title">Faster recovery. Better-supported decisions.</h2>
             <p class="brp-chapter-lede">
-              Reported results showed a reduction in account-resolution time and fewer
-              false positives and false negatives. In prototype testing, investigators
+              Reported results showed a reduction in account-resolution time and <strong>fewer
+              false positives and false negatives</strong>. In prototype testing, investigators
               became faster as they learned the guided workflow.
             </p>
           </div>
