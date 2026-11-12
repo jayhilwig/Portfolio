@@ -2651,6 +2651,10 @@
 .brp-showcase--phone {
   max-width: 460px;
 }
+.brp-showcase img.brp-order-review-image {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
 .brp-v3 .brp-rationale {
   margin-top: 22px;
   padding-left: 14px;
