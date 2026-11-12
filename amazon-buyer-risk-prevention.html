@@ -40,7 +40,7 @@
 
     <link
       rel="preload"
-      href="/fonts/FTRegolaNeue-Regular.woff2"
+      href="/fonts/FTRegolaNeue-Medium.woff2"
       as="font"
       type="font/woff2"
       crossorigin
@@ -83,7 +83,8 @@
     </script>
 
     <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="brp.css" />
+    <link rel="stylesheet" href="brp.css?v=case-study-v3" />
+    <link rel="stylesheet" href="lite-light.css" />
 
     <!-- Mouseflow -->
     <script type="text/javascript">
@@ -103,6 +104,12 @@
     <header class="brp-header">
       <div class="container brp-nav">
         <a class="brp-brand" href="index.html#work">jay hilwig</a>
+        <nav class="brp-chapter-nav" aria-label="Case study chapters">
+          <a href="#overview"><span aria-hidden="true">01</span> Overview</a>
+          <a href="#problem"><span aria-hidden="true">02</span> Problem</a>
+          <a href="#decisions"><span aria-hidden="true">03</span> Decisions</a>
+          <a href="#impact"><span aria-hidden="true">04</span> Impact</a>
+        </nav>
         <nav class="brp-nav-links" aria-label="Portfolio links">
           <a href="index.html#work">Portfolio</a>
           <a
@@ -121,196 +128,305 @@
       </div>
     </header>
 
-    <main id="main-content">
-      <section class="brp-hero brp-hero--compact">
+    <main id="main-content" class="brp-v3">
+      <section class="brp-hero brp-chapter" id="overview" aria-labelledby="overview-title">
         <div class="container">
-          <div class="brp-hero-copy">
-            <div class="brp-eyebrow">Amazon / Buyer Risk Prevention</div>
-            <h1>Designing recovery across customer and risk systems.</h1>
-            <p>
-              I designed two connected workflows inside Amazon Buyer Risk Prevention: a
-              self-service recovery experience for customers and guided decision support for fraud investigators.
+          <div class="brp-opening-grid">
+            <div>
+              <p class="brp-chapter-index"><strong>01</strong> Overview</p>
+              <p class="brp-eyebrow">Amazon / Buyer Risk Prevention</p>
+              <h1 id="overview-title">Account recovery should take minutes, not days.</h1>
+              <p class="brp-chapter-lede">
+                I designed two connected experiences: a clearer way for customers to report
+                unauthorized account activity, and guided workflows that helped fraud
+                investigators make informed decisions.
+              </p>
+              <ul class="brp-focus-areas" aria-label="Design focus">
+                <li>Customer recovery</li>
+                <li>Investigator decision support</li>
+                <li>Trust &amp; safety</li>
+              </ul>
+            </div>
+
+            <figure class="brp-showcase">
+              <button class="brp-image-button" type="button" aria-label="Enlarge account recovery visualization">
+                <img
+                  src="/public/images/brp/recovery-showcase.webp"
+                  data-lightbox="/public/images/brp/recovery-showcase.webp"
+                  alt="Reconstructed account-recovery phone screens alongside a guided investigator workflow"
+                  width="1448"
+                  height="1086"
+                  fetchpriority="high"
+                  decoding="async"
+                />
+              </button>
+              <figcaption>AI-reconstructed visualization based on original screens. Interface details and values are illustrative.</figcaption>
+            </figure>
+          </div>
+
+          <dl class="brp-result-rail" aria-label="Reported project results">
+            <div><dt>Account-resolution time</dt><dd>2–3 days <span aria-label="to">→</span> ~5 min</dd></div>
+            <div><dt>False positives</dt><dd>−2%</dd></div>
+            <div><dt>False negatives</dt><dd>−5%</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="brp-chapter brp-chapter--light brp-problem" id="problem" aria-labelledby="problem-title">
+        <div class="container">
+          <p class="brp-chapter-index"><strong>02</strong> Problem &amp; constraints</p>
+          <div class="brp-chapter-intro">
+            <h2 id="problem-title">Help the right customer. Stop the wrong activity.</h2>
+            <p class="brp-chapter-lede">
+              A restricted account is a high-stakes moment. Legitimate customers need a way
+              back in, while the recovery process has to surface useful evidence and support
+              careful fraud decisions. The experience crosses two audiences with different needs.
             </p>
           </div>
-        </div>
-      </section>
-
-      <section class="brp-section brp-customer-product" id="customer-recovery">
-        <div class="container">
-          <div class="brp-section-heading">
-            <div class="brp-eyebrow">Customer self-service recovery</div>
-            <h2>Helping legitimate customers recover access.</h2>
-            <p class="brp-section-intro">I designed a structured customer recovery flow that helped people report suspicious activity, review affected orders, and provide the information needed to unlock their account.</p>
+          <div class="brp-constraints">
+            <article>
+              <p class="brp-v3-label">Constraint / 01</p>
+              <h3>Clarity for customers</h3>
+              <p>Make it easy to identify suspicious activity without asking customers to understand internal risk processes.</p>
+            </article>
+            <article>
+              <p class="brp-v3-label">Constraint / 02</p>
+              <h3>Structured case context</h3>
+              <p>Capture the relevant orders and details so the next person in the process can act on the report.</p>
+            </article>
+            <article>
+              <p class="brp-v3-label">Constraint / 03</p>
+              <h3>Judgment stays human</h3>
+              <p>Support consistent, case-specific checks while keeping context and the final decision in the investigator’s hands.</p>
+            </article>
           </div>
 
-          <figure class="brp-customer-stage brp-customer-stage--identify">
-            <div class="brp-stage-copy"><span>01 — Report suspicious activity</span><figcaption>Customers first identified the activity they did not authorize.</figcaption></div>
-            <div class="brp-customer-mobile-shot brp-customer-mobile-shot--first">
-              <img src="/public/images/brp/cssw screen 2b.png" alt="Mobile screen for identifying unauthorized account activity" loading="lazy" decoding="async" />
+          <div class="brp-recovery-summary">
+            <div class="brp-summary-title">
+              <h3>One connected recovery system</h3>
+              <p>Conceptual workflow summary</p>
             </div>
-          </figure>
-
-          <figure class="brp-customer-stage brp-customer-stage--review">
-            <div class="brp-stage-copy"><span>02 — Review affected and related orders</span><figcaption>Customers could review suspicious orders, then confirm additional related activity before submitting the report.</figcaption></div>
-            <div class="brp-review-screens brp-review-screens--single">
-              <div class="brp-customer-mobile-shot brp-customer-mobile-shot--review">
-                <img src="/public/images/brp/report_unauth.png" alt="Mobile screen listing orders to review for unauthorized activity" loading="lazy" decoding="async" />
+            <div class="brp-summary-lanes">
+              <div class="brp-summary-lane">
+                <h4 class="brp-v3-label">Customer-facing</h4>
+                <ol class="brp-summary-steps">
+                  <li>Identify activity</li>
+                  <li>Review orders</li>
+                  <li>Submit context</li>
+                </ol>
+              </div>
+              <p class="brp-summary-bridge">Structured evidence between workflows</p>
+              <div class="brp-summary-lane">
+                <h4 class="brp-v3-label">Investigator-facing</h4>
+                <ol class="brp-summary-steps">
+                  <li>Review case</li>
+                  <li>Guided questions</li>
+                  <li>Human decision</li>
+                </ol>
               </div>
             </div>
-          </figure>
+            <details class="brp-map-disclosure">
+              <summary>View the recovery system map</summary>
+              <figure class="brp-recovery-map">
+                <div class="brp-recovery-map-scroll" role="region" aria-label="Customer recovery system map" tabindex="0">
+                  <svg
+                    class="brp-home-system-map"
+                    viewBox="0 0 1080 500"
+                    role="img"
+                    aria-label="Buyer Risk Prevention system map"
+                    aria-describedby="brp-home-map-desc"
+                  >
+                    <desc id="brp-home-map-desc">
+                      A customer moves from a risk signal and restriction
+                      into self-service or customer-service support.
+                      Investigators review unresolved cases, record
+                      decisions, and create structured data that informs
+                      future system improvements.
+                    </desc>
+                    <defs>
+                      <linearGradient id="brp-home-line" x1="0" x2="1">
+                        <stop offset="0" stop-color="#6fd4e0"></stop>
+                        <stop offset="1" stop-color="#c6ff5f"></stop>
+                      </linearGradient>
+                      <filter id="brp-home-glow" x="-60%" y="-60%" width="220%" height="220%">
+                        <feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur>
+                        <feMerge>
+                          <feMergeNode in="blur"></feMergeNode>
+                          <feMergeNode in="SourceGraphic"></feMergeNode>
+                        </feMerge>
+                      </filter>
+                    </defs>
 
-          <figure class="brp-customer-stage brp-customer-stage--verify">
-            <div class="brp-stage-copy"><span>03 — Verify information and recover access</span><figcaption>Structured input helped customers provide the information and supporting details needed to recover access.</figcaption></div>
-            <div class="brp-editorial-artifact"><img src="/public/images/brp/cssw.png" alt="Customer recovery artifact combining document verification and account security center interfaces" loading="lazy" decoding="async" /></div>
-          </figure>
+                    <g class="brp-home-map-grid" aria-hidden="true">
+                      <path d="M40 100H1040M40 200H1040M40 300H1040M40 400H1040"></path>
+                      <path d="M180 40V460M360 40V460M540 40V460M720 40V460M900 40V460"></path>
+                    </g>
+
+                    <g class="brp-home-map-links" aria-hidden="true">
+                      <path d="M142 250H200"></path>
+                      <path d="M324 250H370"></path>
+                      <path d="M488 250C520 250 520 150 550 150"></path>
+                      <path d="M488 250C520 250 520 350 550 350"></path>
+                      <path d="M674 150C720 150 716 250 760 250"></path>
+                      <path d="M684 350C724 350 720 250 760 250"></path>
+                      <path d="M884 250H944"></path>
+                      <path d="M994 286C994 412 780 438 626 414"></path>
+                      <path d="M626 414C466 394 350 350 266 302"></path>
+                    </g>
+
+                    <g class="brp-home-map-node brp-home-map-node--customer">
+                      <rect x="42" y="214" width="100" height="72" rx="2"></rect>
+                      <text x="92" y="246" text-anchor="middle">Customer</text>
+                      <text class="brp-home-node-note" x="92" y="266" text-anchor="middle">needs access</text>
+                    </g>
+                    <g class="brp-home-map-node">
+                      <rect x="200" y="214" width="124" height="72" rx="2"></rect>
+                      <text x="262" y="246" text-anchor="middle">Risk signal</text>
+                      <text class="brp-home-node-note" x="262" y="266" text-anchor="middle">restriction</text>
+                    </g>
+                    <g class="brp-home-map-node brp-home-map-node--active" filter="url(#brp-home-glow)">
+                      <rect x="370" y="208" width="118" height="84" rx="2"></rect>
+                      <text x="429" y="244" text-anchor="middle">Recovery</text>
+                      <text class="brp-home-node-note" x="429" y="266" text-anchor="middle">trusted path</text>
+                    </g>
+                    <g class="brp-home-map-node">
+                      <rect x="550" y="94" width="124" height="112" rx="2"></rect>
+                      <image
+                        class="brp-home-node-icon"
+                        href="public/images/brp/self-service-structured-input-icon.svg"
+                        x="596"
+                        y="104"
+                        width="32"
+                        height="32"
+                        aria-hidden="true"
+                      ></image>
+                      <text x="612" y="166" text-anchor="middle">Self-service</text>
+                      <text class="brp-home-node-note" x="612" y="187" text-anchor="middle">structured input</text>
+                    </g>
+                    <g class="brp-home-map-node">
+                      <rect x="550" y="312" width="134" height="76" rx="2"></rect>
+                      <text x="617" y="345" text-anchor="middle">Customer service</text>
+                      <text class="brp-home-node-note" x="617" y="366" text-anchor="middle">human fallback</text>
+                    </g>
+                    <g class="brp-home-map-node">
+                      <rect x="760" y="194" width="124" height="112" rx="2"></rect>
+                      <image
+                        class="brp-home-node-icon"
+                        href="public/images/brp/investigator-guided-workflow-icon.svg"
+                        x="806"
+                        y="204"
+                        width="32"
+                        height="32"
+                        aria-hidden="true"
+                      ></image>
+                      <text x="822" y="266" text-anchor="middle">Investigator</text>
+                      <text class="brp-home-node-note" x="822" y="287" text-anchor="middle">expert judgment</text>
+                    </g>
+                    <g class="brp-home-map-node brp-home-map-node--decision">
+                      <rect x="944" y="214" width="100" height="72" rx="2"></rect>
+                      <text x="994" y="246" text-anchor="middle">Decision</text>
+                      <text class="brp-home-node-note" x="994" y="266" text-anchor="middle">next step</text>
+                    </g>
+                    <g class="brp-home-feedback-label" aria-hidden="true">
+                      <text x="626" y="439">STRUCTURED CONTEXT → ANALYSIS → WORKFLOW IMPROVEMENT</text>
+                    </g>
+                  </svg>
+                </div>
+              </figure>
+            </details>
+          </div>
         </div>
       </section>
 
-      <section class="brp-section brp-investigator-product" id="guided-workflows">
+      <section class="brp-chapter brp-decisions" id="decisions" aria-labelledby="decisions-title">
         <div class="container">
-          <div class="brp-section-heading">
-            <div class="brp-eyebrow">Guided workflows for investigators</div>
-            <h2>Guide the decision without removing judgment.</h2>
-            <p class="brp-section-intro">I designed dynamic, SOP-informed workflows that helped BRP investigators review customer data, answer case-specific questions, and make faster, more consistent decisions while keeping control of the final judgment.</p>
+          <p class="brp-chapter-index"><strong>03</strong> Key design decisions</p>
+          <div class="brp-chapter-intro brp-decisions-intro">
+            <h2 id="decisions-title">Three decisions shaped the experience.</h2>
+            <p>Three decisions connected customer clarity with structured evidence and investigator judgment.</p>
           </div>
 
-          <figure class="brp-investigator-primary">
-            <img src="/public/images/brp/gw.webp" alt="Guided Workflows interface with guided questions, customer status choices, contextual hints, and order information" loading="lazy" decoding="async" />
-          </figure>
+          <div class="brp-decision-duo">
+            <article class="brp-decision-callout" id="customer-recovery">
+              <p class="brp-decision-label"><strong>01</strong> Customer reporting</p>
+              <h3>Start with what people recognize.</h3>
+              <p>The reporting experience asked customers to identify activity they did not authorize using terms they would recognize.</p>
+              <p class="brp-rationale"><strong>Design rationale</strong> Make the first step concrete so the customer can provide usable input.</p>
+            </article>
+            <article class="brp-decision-callout">
+              <p class="brp-decision-label"><strong>02</strong> Order context</p>
+              <h3>Ask about the orders that matter.</h3>
+              <p>Customers could review suspicious orders and identify related activity before submitting a report.</p>
+              <p class="brp-rationale"><strong>Design rationale</strong> Gather structured details while the customer still has the context to recognize them.</p>
+            </article>
+          </div>
+        </div>
 
-          <figure class="brp-investigator-primary brp-recovery-map">
-            <div class="brp-recovery-map-scroll" role="region" aria-label="Customer recovery system map" tabindex="0">
-              <svg
-                class="brp-home-system-map"
-                viewBox="0 0 1080 500"
-                role="img"
-                aria-label="Buyer Risk Prevention system map"
-                aria-describedby="brp-home-map-desc"
-              >
-                <desc id="brp-home-map-desc">
-                  A customer moves from a risk signal and restriction
-                  into self-service or customer-service support.
-                  Investigators review unresolved cases, record
-                  decisions, and create structured data that informs
-                  future system improvements.
-                </desc>
-                <defs>
-                  <linearGradient id="brp-home-line" x1="0" x2="1">
-                    <stop offset="0" stop-color="#6fd4e0"></stop>
-                    <stop offset="1" stop-color="#c6ff5f"></stop>
-                  </linearGradient>
-                  <filter id="brp-home-glow" x="-60%" y="-60%" width="220%" height="220%">
-                    <feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur>
-                    <feMerge>
-                      <feMergeNode in="blur"></feMergeNode>
-                      <feMergeNode in="SourceGraphic"></feMergeNode>
-                    </feMerge>
-                  </filter>
-                </defs>
-
-                <g class="brp-home-map-grid" aria-hidden="true">
-                  <path d="M40 100H1040M40 200H1040M40 300H1040M40 400H1040"></path>
-                  <path d="M180 40V460M360 40V460M540 40V460M720 40V460M900 40V460"></path>
-                </g>
-
-                <g class="brp-home-map-links" aria-hidden="true">
-                  <path d="M142 250H200"></path>
-                  <path d="M324 250H370"></path>
-                  <path d="M488 250C520 250 520 150 550 150"></path>
-                  <path d="M488 250C520 250 520 350 550 350"></path>
-                  <path d="M674 150C720 150 716 250 760 250"></path>
-                  <path d="M684 350C724 350 720 250 760 250"></path>
-                  <path d="M884 250H944"></path>
-                  <path d="M994 286C994 412 780 438 626 414"></path>
-                  <path d="M626 414C466 394 350 350 266 302"></path>
-                </g>
-
-                <g class="brp-home-map-node brp-home-map-node--customer">
-                  <rect x="42" y="214" width="100" height="72" rx="2"></rect>
-                  <text x="92" y="246" text-anchor="middle">Customer</text>
-                  <text class="brp-home-node-note" x="92" y="266" text-anchor="middle">needs access</text>
-                </g>
-                <g class="brp-home-map-node">
-                  <rect x="200" y="214" width="124" height="72" rx="2"></rect>
-                  <text x="262" y="246" text-anchor="middle">Risk signal</text>
-                  <text class="brp-home-node-note" x="262" y="266" text-anchor="middle">restriction</text>
-                </g>
-                <g class="brp-home-map-node brp-home-map-node--active" filter="url(#brp-home-glow)">
-                  <rect x="370" y="208" width="118" height="84" rx="2"></rect>
-                  <text x="429" y="244" text-anchor="middle">Recovery</text>
-                  <text class="brp-home-node-note" x="429" y="266" text-anchor="middle">trusted path</text>
-                </g>
-                <g class="brp-home-map-node">
-                  <rect x="550" y="94" width="124" height="112" rx="2"></rect>
-                  <image
-                    class="brp-home-node-icon"
-                    href="public/images/brp/self-service-structured-input-icon.svg"
-                    x="596"
-                    y="104"
-                    width="32"
-                    height="32"
-                    aria-hidden="true"
-                  ></image>
-                  <text x="612" y="166" text-anchor="middle">Self-service</text>
-                  <text class="brp-home-node-note" x="612" y="187" text-anchor="middle">structured input</text>
-                </g>
-                <g class="brp-home-map-node">
-                  <rect x="550" y="312" width="134" height="76" rx="2"></rect>
-                  <text x="617" y="345" text-anchor="middle">Customer service</text>
-                  <text class="brp-home-node-note" x="617" y="366" text-anchor="middle">human fallback</text>
-                </g>
-                <g class="brp-home-map-node">
-                  <rect x="760" y="194" width="124" height="112" rx="2"></rect>
-                  <image
-                    class="brp-home-node-icon"
-                    href="public/images/brp/investigator-guided-workflow-icon.svg"
-                    x="806"
-                    y="204"
-                    width="32"
-                    height="32"
-                    aria-hidden="true"
-                  ></image>
-                  <text x="822" y="266" text-anchor="middle">Investigator</text>
-                  <text class="brp-home-node-note" x="822" y="287" text-anchor="middle">expert judgment</text>
-                </g>
-                <g class="brp-home-map-node brp-home-map-node--decision">
-                  <rect x="944" y="214" width="100" height="72" rx="2"></rect>
-                  <text x="994" y="246" text-anchor="middle">Decision</text>
-                  <text class="brp-home-node-note" x="994" y="266" text-anchor="middle">next step</text>
-                </g>
-                <g class="brp-home-feedback-label" aria-hidden="true">
-                  <text x="626" y="439">STRUCTURED CONTEXT → ANALYSIS → WORKFLOW IMPROVEMENT</text>
-                </g>
-              </svg>
+        <article class="brp-investigator-decision" id="guided-workflows">
+          <div class="container brp-investigator-grid">
+            <div class="brp-decision-callout">
+              <p class="brp-decision-label"><strong>03</strong> Investigator decision support</p>
+              <h3>Guide the decision. Keep the judgment.</h3>
+              <p>I designed dynamic, SOP-informed workflows that brought case-specific questions and customer information into a structured review experience for fraud investigators.</p>
+              <p class="brp-rationale"><strong>Design rationale</strong> Support faster, more consistent work while keeping the final decision with the investigator.</p>
             </div>
-          </figure>
+
+            <figure class="brp-showcase">
+              <button class="brp-image-button" type="button" aria-label="Enlarge investigator workflow visualization">
+                <img
+                  src="/public/images/brp/investigator-showcase.webp"
+                  data-lightbox="/public/images/brp/investigator-showcase.webp"
+                  alt="Reconstructed investigator workspace showing guided questions and order context"
+                  width="1448"
+                  height="1086"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </button>
+              <figcaption>AI-reconstructed visualization based on the original investigator interface. Interface details and values are illustrative.</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <div class="brp-decision-summary">
+          <div class="container">
+            <strong>One principle across both sides</strong>
+            <p>Make the next step clear and give the next person in the workflow enough context to act.</p>
+          </div>
         </div>
       </section>
 
-      <section class="brp-section brp-prototype-research" id="prototype-research">
+      <section class="brp-chapter brp-chapter--light brp-impact" id="impact" aria-labelledby="impact-title">
         <div class="container">
-          <div class="brp-prototype-evidence" aria-label="Prototype research evidence">
+          <p class="brp-chapter-index"><strong>04</strong> Outcomes &amp; evidence</p>
+          <div class="brp-chapter-intro">
+            <h2 id="impact-title">Faster recovery. Better-supported decisions.</h2>
+            <p class="brp-chapter-lede">
+              Reported results showed a reduction in account-resolution time and fewer
+              false positives and false negatives. In prototype testing, investigators
+              became faster as they learned the guided workflow.
+            </p>
+          </div>
+
+          <div class="brp-impact-primary">
+            <p class="brp-v3-label">Account-resolution time / reported impact</p>
+            <p class="brp-impact-metric">2–3 days <span aria-label="to">→</span> ~5 min.</p>
+          </div>
+          <dl class="brp-impact-secondary">
+            <div><dt>Reported false-positive rate change</dt><dd>−2%</dd></div>
+            <div><dt>Reported false-negative rate change</dt><dd>−5%</dd></div>
+          </dl>
+          <div class="brp-research-panel" id="prototype-research">
             <div>
-              <span>Prototype research</span>
-              <strong class="brp-metric-sequence"><span>9:34</span><small aria-hidden="true">→</small><span>5:23</span></strong>
+              <p class="brp-v3-label">Prototype evaluation / investigator workflow</p>
+              <p class="brp-research-metric">9:34 <span aria-label="to">→</span> 5:23</p>
             </div>
-            <div><strong>43% faster by the third task</strong><p>Investigators became faster as they learned the guided workflow pattern.</p></div>
+            <div>
+              <strong>43% faster by the third task</strong>
+              <p>Task time dropped as investigators learned the guided workflow pattern. This was measured in prototype testing.</p>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section class="brp-section brp-outcomes" id="impact">
-        <div class="container">
-          <div class="brp-section-heading"><div class="brp-eyebrow">Impact</div><h2>Faster recovery with better decisions.</h2></div>
-          <div class="brp-outcome-grid">
-            <div><strong class="brp-metric-sequence brp-metric-sequence--impact"><span>2–3 days</span><small aria-hidden="true">→</small><span>~5 min.</span></strong><span>Account-resolution time</span></div>
-            <div><strong>−2%</strong><span>False positives</span></div>
-            <div><strong>−5%</strong><span>False negatives</span></div>
-          </div>
-          <div class="brp-closing">
-            <p>Together, the two workflows helped legitimate customers recover faster while giving investigators better support for accurate, consistent decisions.</p>
-            <a class="brp-back-link" href="index.html#work"><span aria-hidden="true">↗</span>Back to work</a>
-          </div>
+          <a class="brp-back-link" href="index.html#work"><span aria-hidden="true">↗</span>Back to work</a>
         </div>
       </section>
     </main>
@@ -326,14 +442,27 @@
     <script>
       window.initLiteLight?.();
 
+      let imageOpener;
+      const lightbox = document.querySelector(".lite-light");
+      if (lightbox) {
+        const restoreFocus = new MutationObserver(() => {
+          if (!imageOpener || lightbox.classList.contains("lite-light-active")) return;
+          imageOpener.focus({ preventScroll: true });
+          imageOpener = null;
+        });
+        restoreFocus.observe(lightbox, { attributes: true, attributeFilter: ["class"] });
+      }
+
       document.addEventListener("click", (event) => {
         if (!(event.target instanceof Element)) return;
 
         const trigger = event.target.closest(".brp-image-button");
-        if (!trigger || event.target.matches("img[data-lightbox]")) return;
+        if (!trigger) return;
 
         const image = trigger.querySelector("img[data-lightbox]");
         if (!image) return;
+        imageOpener = trigger;
+        if (event.target === image) return;
 
         event.preventDefault();
         image.click();
